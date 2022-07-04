@@ -10,6 +10,8 @@ html {
 
 a {
   display: inline-block;
+  color: #000;
+  text-decoration: none;
 }
 
 ul,
@@ -17,4 +19,17 @@ li {
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  position: relative;
+}
+
+.container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 20px;
 }

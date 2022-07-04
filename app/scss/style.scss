@@ -1,2 +1,62 @@
+@import 'fonts';
 @import 'vars';
 @import 'global';
+
+// header
+.header {
+  max-height: 100px;
+}
+.header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  margin-right: 24px;
+}
+.menu {
+  margin-right: 10px;
+  li {
+    display: inline-block;
+    margin-right: 30px;
+    line-height: 96px;
+  }
+  a {
+    border-top: 4px solid transparent;
+    &:hover {
+      color: #ef7f04;
+      border-top: 4px solid #ef7f04;
+    }
+  }
+}
+.header__btn {
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 40px;
+  color: #fff;
+  padding: 0 19px 0 47px;
+  border-radius: 3px;
+  position: relative;
+}
+.header__btn-measure {
+  background-color: #ef7f04;
+  &::before {
+    content: url(../images/rule.svg);
+    position: absolute;
+    width: 20px;
+    height: 18px;
+    top: 4px;
+    left: 14px;
+  }
+}
+.header__btn-calc {
+  background-color: #3b3a63;
+  &::before {
+    content: url(../images/calculator.svg);
+    position: absolute;
+    width: 20px;
+    height: 18px;
+    top: 4px;
+    left: 14px;
+  }
+}
