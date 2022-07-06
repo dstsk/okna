@@ -13,12 +13,12 @@
     <header class="header">
       <div class="container">
         <div class="header__inner">
-          <div class="logo">
+          <a class="logo" href="#">
             <img src="images/logo.png" alt="logo.png" />
-          </div>
+          </a>
           <nav class="menu">
             <ul>
-              <li class="menu__item"><a href="#">Услуги </a></li>
+              <li class="menu__item"><a href="#">Услуги</a></li>
               <li class="menu__item menu__item--active">
                 <a href="#">Продукция</a>
               </li>
@@ -35,6 +35,84 @@
         </div>
       </div>
     </header>
+
+    <!-- banner -->
+    <section class="banner" style="background-image: url(images/banner.png)">
+      <div class="container">
+        <div class="banner__inner">
+          <div class="banner__description">
+            <div class="banner__text">
+              <h1 class="banner__title">Окна Хаус -</h1>
+              <h2 class="banner__slogan">
+                Профессиональный подход к остеклению
+              </h2>
+            </div>
+            <div class="banner__benefits">
+              <div class="banner__benefit">
+                <img src="images/benefit-img-1.png" alt="" />
+                <p>
+                  Современные окна и балконные конструкции по доступным ценам
+                </p>
+              </div>
+              <div class="banner__benefit">
+                <img src="images/benefit-img-2.png" alt="" />
+                <p>Квалифицированный подход к решению задач любой сложности</p>
+              </div>
+              <div class="banner__benefit">
+                <img src="images/benefit-img-3.png" alt="" />
+                <p>
+                  Гарантия <br />
+                  высочайшего качества нашей продукции
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <form class="banner__form" action="#" method="get">
+            <div class="banner__form-title">Вызвать замерщика на дом</div>
+            <input
+              class="banner__form-input banner__form-input--name"
+              type="text"
+              name="userName"
+              placeholder="Представьтесь, пожалуйста"
+            />
+            <input
+              class="banner__form-input banner__form-input--phone"
+              type="tel"
+              name="phoneNumber"
+              placeholder="Номер телефона"
+              id="phone"
+            />
+            <input
+              class="banner__form-input banner__form-input--email"
+              type="email"
+              name="email"
+              placeholder="E-mail"
+            />
+
+            <div class="banner__form-agreement">
+              <input
+                class="banner__form-checkbox"
+                type="checkbox"
+                id="form-checkbox"
+                required
+              />
+              <label for="form-checkbox"
+                ><div class="banner__form-agreement-text">
+                  Согласен на обработку персональных данных <br />
+                  в соответствии с
+                  <a href="#">политикой конфиденциальности</a>
+                </div></label
+              >
+            </div>
+
+            <button class="banner__form-btn" type="submit">
+              Отправить заявку
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
 
     <script src="js/libs.min.js"></script>
     <script src="js/main.js"></script>

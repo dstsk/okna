@@ -16,16 +16,20 @@
 }
 .menu {
   margin-right: 10px;
+  ul {
+    display: flex;
+  }
   li {
-    display: inline-block;
-    margin-right: 30px;
+    margin-right: 34px;
     line-height: 96px;
   }
   a {
     border-top: 4px solid transparent;
+
     &:hover {
       color: #ef7f04;
       border-top: 4px solid #ef7f04;
+      transition: all 0.3s;
     }
   }
 }
@@ -58,5 +62,162 @@
     height: 18px;
     top: 4px;
     left: 14px;
+  }
+}
+
+// banner
+.banner {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.banner__inner {
+  display: flex;
+  justify-content: space-between;
+  padding: 70px 85px 65px 67px;
+}
+
+.banner__description {
+  max-width: 575px;
+  margin-top: 60px;
+}
+
+.banner__text {
+  margin: 0 0 26px;
+  padding: 0 0 0 16px;
+}
+
+.banner__title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #ef7f04;
+  margin-bottom: 3px;
+}
+
+.banner__slogan {
+  max-width: 470px;
+  font-size: 36px;
+  font-weight: 100;
+  color: #fff;
+}
+
+.banner__benefits {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.banner__benefit {
+  color: #fff;
+  min-width: 165px;
+  margin-right: 44px;
+  img {
+    margin-bottom: 15px;
+  }
+  p {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  &:first-child {
+    margin-right: 59px;
+    padding-top: 3px;
+  }
+  &:first-child p {
+    margin-left: 16px;
+    min-width: 165px;
+  }
+  &:last-child img {
+    margin-bottom: 12px;
+  }
+}
+
+.banner__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 406px;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 43px 43px 65px;
+  position: relative;
+  &-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #2f2f51;
+    margin-bottom: 27px;
+  }
+  &-input {
+    font-size: 14px;
+    line-height: 40px;
+    width: 322px;
+    border-radius: 3px;
+    padding: 0 16px;
+    margin-bottom: 15px;
+    background-color: #e2e2e2;
+    color: #424268;
+    border: none;
+  }
+  &-agreement {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    &-text {
+      padding-left: 34px;
+    }
+    label {
+      position: relative;
+      &::before {
+        content: '';
+        position: absolute;
+        display: inline-block;
+        width: 25px;
+        height: 25px;
+        border: 1px solid #e2e2e2;
+        border-radius: 3px;
+        background-color: #e2e2e2;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 50% 50%;
+      }
+    }
+    a {
+      color: #4b67af;
+    }
+  }
+  &-checkbox {
+    margin-right: 10px;
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    &:checked + label::after {
+      content: '';
+      position: absolute;
+      top: -6px;
+      left: 6px;
+      width: 23px;
+      height: 24px;
+      background-image: url(../images/check-mark.svg);
+    }
+  }
+  &-btn {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 55px;
+    padding: 0 40px;
+    margin: 25px 0 0;
+    color: #fff;
+    background-color: #ef7f04;
+    border-radius: 3px;
+    border: none;
+    cursor: pointer;
+  }
+  &::after {
+    content: url(../images/roulette.png);
+    width: 607px;
+    height: 118px;
+    position: absolute;
+    bottom: -36px;
+    left: -86px;
   }
 }
