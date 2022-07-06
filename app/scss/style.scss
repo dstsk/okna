@@ -5,6 +5,7 @@
 // header
 .header {
   max-height: 100px;
+  background-color: #fff;
 }
 .header__inner {
   display: flex;
@@ -105,7 +106,6 @@
 .banner__benefits {
   display: flex;
   justify-content: start;
-  align-items: center;
 }
 
 .banner__benefit {
@@ -144,8 +144,9 @@
   &-title {
     font-size: 18px;
     font-weight: 700;
-    color: #2f2f51;
     margin-bottom: 27px;
+    color: #2f2f51;
+    text-align: center;
   }
   &-input {
     font-size: 14px;
@@ -219,5 +220,73 @@
     position: absolute;
     bottom: -36px;
     left: -86px;
+  }
+}
+
+// services
+.services__inner {
+  padding: 68px 0;
+}
+.services__title {
+  margin-bottom: 48px;
+}
+.services__tiles {
+  display: flex;
+  flex-wrap: wrap;
+  &:last-child + title {
+    color: red;
+  }
+}
+.services__item {
+  background-position: center, center;
+  background-repeat: no-repeat, no-repeat;
+  background-size: cover, cover;
+  width: 595px;
+  padding: 55px 50px 35px;
+  margin-bottom: 10px;
+  position: relative;
+  border-radius: 3px;
+  color: #2f2f51;
+  transition: all 0.3s;
+  &:nth-child(odd) {
+    margin-right: 10px;
+  }
+  &-titlebox {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    padding-right: 100px;
+    font-size: 24px;
+    font-weight: 700;
+  }
+  &-icon {
+    margin-right: 22px;
+  }
+  &-text {
+    max-width: 300px;
+  }
+  &-arrow {
+    background-image: url(../images/services-arrow.svg);
+    position: absolute;
+    width: 40px;
+    height: 21px;
+    right: 27px;
+    bottom: 27px;
+  }
+  &-arrow.orange {
+    background-image: url(../images/services-arrow-orange.svg);
+    position: absolute;
+    width: 40px;
+    height: 21px;
+    right: 27px;
+    bottom: 27px;
+    opacity: 0;
+    transition: all 0.2s;
+  }
+  &:hover {
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+    .services__item-arrow.orange {
+      opacity: 1;
+    }
   }
 }
