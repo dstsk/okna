@@ -116,132 +116,447 @@
 
     <section class="services">
       <div class="container">
-        <div class="services__inner">
-          <div class="services__title section-title">Наши услуги</div>
-          <div class="services__tiles">
-            <a
-              class="services__item"
-              href="#"
-              style="
-                background-image: linear-gradient(
-                    90.45deg,
-                    #ffffff 47.56%,
-                    rgba(255, 255, 255, 0) 98.81%
-                  ),
-                  url(../images/services-bg-1.jpg);
-              "
-            >
-              <div class="services__item-titlebox">
-                <div class="services__item-icon">
-                  <img
-                    src="images/services-img-1.png"
-                    alt="services-img-1.png"
-                  />
+        <div class="services__title section-title">Наши услуги</div>
+        <div class="services__tiles">
+          <a
+            class="services__item"
+            href="#"
+            style="
+              background-image: linear-gradient(
+                  90.45deg,
+                  #ffffff 47.56%,
+                  rgba(255, 255, 255, 0) 98.81%
+                ),
+                url(../images/services-bg-1.jpg);
+            "
+          >
+            <div class="services__item-titlebox">
+              <div class="services__item-icon">
+                <img src="images/services-img-1.png" alt="services-img-1.png" />
+              </div>
+              <div class="services__item-title">
+                Установка <br />
+                пластиковых окон
+              </div>
+            </div>
+            <p class="services__item-text">
+              Устанавливаем пластиковые окна Rehau от проверенного производителя
+              с гарантией качества
+            </p>
+            <div class="services__item-arrow"></div>
+            <div class="services__item-arrow orange"></div>
+          </a>
+          <a
+            class="services__item"
+            href="#"
+            style="
+              background-image: linear-gradient(
+                  90.45deg,
+                  #ffffff 47.56%,
+                  rgba(255, 255, 255, 0) 98.81%
+                ),
+                url(../images/services-bg-2.jpg);
+            "
+          >
+            <div class="services__item-titlebox">
+              <div class="services__item-icon">
+                <img src="images/services-img-2.png" alt="services-img-2.png" />
+              </div>
+              <div class="services__item-title">
+                Остекление балконов и лоджий
+              </div>
+            </div>
+            <p class="services__item-text">
+              Занимаемся остеклением и отделкой балконов и лоджий. Теплое и
+              холодное остекление, изготовление выносов и крыш. Беремся за
+              сложные объекты
+            </p>
+            <div class="services__item-arrow"></div>
+            <div class="services__item-arrow orange"></div>
+          </a>
+          <a
+            class="services__item"
+            href="#"
+            style="
+              background-image: linear-gradient(
+                  90.45deg,
+                  #ffffff 47.56%,
+                  rgba(255, 255, 255, 0) 98.81%
+                ),
+                url(../images/services-bg-3.jpg);
+            "
+          >
+            <div class="services__item-titlebox">
+              <div class="services__item-icon">
+                <img src="images/services-img-3.png" alt="services-img-3.png" />
+              </div>
+              <div class="services__item-title">
+                Остекление <br />
+                коттеджей и дач
+              </div>
+            </div>
+            <p class="services__item-text">
+              Остекление и отделка под ключ: от коттеджей и дач до террас и
+              беседок. Выделяем личного технолога под каждый объект
+            </p>
+            <div class="services__item-arrow"></div>
+            <div class="services__item-arrow orange"></div>
+          </a>
+          <a
+            class="services__item"
+            href="#"
+            style="
+              background-image: linear-gradient(
+                  90.45deg,
+                  #ffffff 47.56%,
+                  rgba(255, 255, 255, 0) 98.81%
+                ),
+                url(../images/services-bg-4.jpg);
+            "
+          >
+            <div class="services__item-titlebox">
+              <div class="services__item-icon">
+                <img src="images/services-img-4.png" alt="services-img-4.png" />
+              </div>
+              <div class="services__item-title">
+                Остекление корпоративных объектов
+              </div>
+            </div>
+            <p class="services__item-text">
+              Реализуем сложные проекты по остеклению торговых центров,
+              ресторанов, производственных помещений и офисов
+            </p>
+            <div class="services__item-arrow"></div>
+            <div class="services__item-arrow orange"></div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="products">
+      <div class="container container-mixitup">
+        <div class="products__title section-title">Продукция</div>
+
+        <div class="products__nav">
+          <button
+            class="products__nav-item"
+            type="button"
+            data-filter=".category-a"
+          >
+            Стандарт
+          </button>
+          <button
+            class="products__nav-item"
+            type="button"
+            data-filter=".category-b"
+          >
+            Бизнес
+          </button>
+          <button
+            class="products__nav-item"
+            type="button"
+            data-filter=".category-c"
+          >
+            Премиум
+          </button>
+          <button
+            class="products__nav-item"
+            type="button"
+            data-filter=".category-d"
+          >
+            Эксклюзив
+          </button>
+        </div>
+
+        <div class="products__slider mix category-a">
+          <div class="products__slider-item">
+            <div class="products__item">
+              <div class="products__item-image">
+                <img src="images/products-img-1.jpg" alt="products-img-1" />
+              </div>
+              <div class="products__description">
+                <div class="products__item-title">Rehau Standard</div>
+                <div class="products__item-text">
+                  Сохраняют тепло в доме, защищают от шума и вписываются в любой
+                  интерьер. <br />
+                  Практичный выбор.
                 </div>
-                <div class="services__item-title">
-                  Установка <br />
-                  пластиковых окон
+                <div class="products__item-features">
+                  <ul class="feature__box">
+                    <li>
+                      <span class="feature__name">Системная глубина</span>
+                      <span class="feature__value">60/60 мм</span>
+                    </li>
+                    <li>
+                      <span class="feature__name">Ширина стеклопакета</span>
+                      <span class="feature__value">24/31 мм</span>
+                    </li>
+                    <li>
+                      <span class="feature__name">Воздушные камеры</span>
+                      <span class="feature__value">3</span>
+                    </li>
+                    <li>
+                      <span class="feature__name">Теплосопротивление</span>
+                      <span class="feature__value">0,70 м2С/ВТ</span>
+                    </li>
+                  </ul>
                 </div>
               </div>
-              <p class="services__item-text">
-                Устанавливаем пластиковые окна Rehau от проверенного
-                производителя с гарантией качества
-              </p>
-              <div class="services__item-arrow"></div>
-              <div class="services__item-arrow orange"></div>
-            </a>
-            <a
-              class="services__item"
-              href="#"
-              style="
-                background-image: linear-gradient(
-                    90.45deg,
-                    #ffffff 47.56%,
-                    rgba(255, 255, 255, 0) 98.81%
-                  ),
-                  url(../images/services-bg-2.jpg);
-              "
-            >
-              <div class="services__item-titlebox">
-                <div class="services__item-icon">
-                  <img
-                    src="images/services-img-2.png"
-                    alt="services-img-2.png"
-                  />
+            </div>
+          </div>
+          <div class="products__slider-item">
+            <div class="products__item">
+              <div class="products__item-image">
+                <img src="images/products-img-1.jpg" alt="products-img-1" />
+              </div>
+              <div class="products__description">
+                <div class="products__item-title">Rehau Blitz New 1.1</div>
+                <div class="products__item-text">
+                  Сохраняют тепло в доме, защищают от шума и вписываются в любой
+                  интерьер. <br />
+                  Практичный выбор.
                 </div>
-                <div class="services__item-title">
-                  Остекление балконов и лоджий
+                <div class="products__item-features">
+                  <ul class="feature__box">
+                    <li>
+                      <span class="feature__name">Системная глубина</span>
+                      <span class="feature__value">60/60 мм</span>
+                    </li>
+                    <li>
+                      <span class="feature__name">Ширина стеклопакета</span>
+                      <span class="feature__value">24/31 мм</span>
+                    </li>
+                    <li>
+                      <span class="feature__name">Воздушные камеры</span>
+                      <span class="feature__value">3</span>
+                    </li>
+                    <li>
+                      <span class="feature__name">Теплосопротивление</span>
+                      <span class="feature__value">0,70 м2С/ВТ</span>
+                    </li>
+                  </ul>
                 </div>
               </div>
-              <p class="services__item-text">
-                Занимаемся остеклением и отделкой балконов и лоджий. Теплое и
-                холодное остекление, изготовление выносов и крыш. Беремся за
-                сложные объекты
-              </p>
-              <div class="services__item-arrow"></div>
-              <div class="services__item-arrow orange"></div>
-            </a>
-            <a
-              class="services__item"
-              href="#"
-              style="
-                background-image: linear-gradient(
-                    90.45deg,
-                    #ffffff 47.56%,
-                    rgba(255, 255, 255, 0) 98.81%
-                  ),
-                  url(../images/services-bg-3.jpg);
-              "
-            >
-              <div class="services__item-titlebox">
-                <div class="services__item-icon">
-                  <img
-                    src="images/services-img-3.png"
-                    alt="services-img-3.png"
-                  />
+            </div>
+          </div>
+        </div>
+
+        <div class="products__slider mix category-b">
+          <div class="products__slider-item">
+            <div class="products__item">
+              <div class="products__item-image">
+                <img src="images/products-img-1.jpg" alt="products-img-1" />
+              </div>
+              <div class="products__description">
+                <div class="products__item-title">Rehau Business</div>
+                <div class="products__item-text">
+                  Сохраняют тепло в доме, защищают от шума и вписываются в любой
+                  интерьер. <br />
+                  Практичный выбор.
                 </div>
-                <div class="services__item-title">
-                  Остекление <br />
-                  коттеджей и дач
+                <div class="products__item-features">
+                  <ul class="feature__box">
+                    <li>
+                      <span class="feature__name">Системная глубина</span>
+                      <span class="feature__value">60/60 мм</span>
+                    </li>
+                    <li>
+                      <span class="feature__name">Ширина стеклопакета</span>
+                      <span class="feature__value">24/31 мм</span>
+                    </li>
+                    <li>
+                      <span class="feature__name">Воздушные камеры</span>
+                      <span class="feature__value">3</span>
+                    </li>
+                    <li>
+                      <span class="feature__name">Теплосопротивление</span>
+                      <span class="feature__value">0,70 м2С/ВТ</span>
+                    </li>
+                  </ul>
                 </div>
               </div>
-              <p class="services__item-text">
-                Остекление и отделка под ключ: от коттеджей и дач до террас и
-                беседок. Выделяем личного технолога под каждый объект
-              </p>
-              <div class="services__item-arrow"></div>
-              <div class="services__item-arrow orange"></div>
-            </a>
-            <a
-              class="services__item"
-              href="#"
-              style="
-                background-image: linear-gradient(
-                    90.45deg,
-                    #ffffff 47.56%,
-                    rgba(255, 255, 255, 0) 98.81%
-                  ),
-                  url(../images/services-bg-4.jpg);
-              "
-            >
-              <div class="services__item-titlebox">
-                <div class="services__item-icon">
-                  <img
-                    src="images/services-img-4.png"
-                    alt="services-img-4.png"
-                  />
+            </div>
+          </div>
+          <div class="products__slider-item">
+            <div class="products__item">
+              <div class="products__item-image">
+                <img src="images/products-img-1.jpg" alt="products-img-1" />
+              </div>
+              <div class="products__description">
+                <div class="products__item-title">Rehau Blitz New 2.1</div>
+                <div class="products__item-text">
+                  Сохраняют тепло в доме, защищают от шума и вписываются в любой
+                  интерьер. <br />
+                  Практичный выбор.
                 </div>
-                <div class="services__item-title">
-                  Остекление корпоративных объектов
+                <div class="products__item-features">
+                  <ul class="feature__box">
+                    <li>
+                      <span class="feature__name">Системная глубина</span>
+                      <span class="feature__value">60/60 мм</span>
+                    </li>
+                    <li>
+                      <span class="feature__name">Ширина стеклопакета</span>
+                      <span class="feature__value">24/31 мм</span>
+                    </li>
+                    <li>
+                      <span class="feature__name">Воздушные камеры</span>
+                      <span class="feature__value">3</span>
+                    </li>
+                    <li>
+                      <span class="feature__name">Теплосопротивление</span>
+                      <span class="feature__value">0,70 м2С/ВТ</span>
+                    </li>
+                  </ul>
                 </div>
               </div>
-              <p class="services__item-text">
-                Реализуем сложные проекты по остеклению торговых центров,
-                ресторанов, производственных помещений и офисов
-              </p>
-              <div class="services__item-arrow"></div>
-              <div class="services__item-arrow orange"></div>
-            </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="products__slider mix category-c">
+          <div class="products__slider-item">
+            <div class="products__item">
+              <div class="products__item-image">
+                <img src="images/products-img-1.jpg" alt="products-img-1" />
+              </div>
+              <div class="products__description">
+                <div class="products__item-title">Rehau Premium</div>
+                <div class="products__item-text">
+                  Сохраняют тепло в доме, защищают от шума и вписываются в любой
+                  интерьер. <br />
+                  Практичный выбор.
+                </div>
+                <div class="products__item-features">
+                  <ul class="feature__box">
+                    <li>
+                      <span class="feature__name">Системная глубина</span>
+                      <span class="feature__value">60/60 мм</span>
+                    </li>
+                    <li>
+                      <span class="feature__name">Ширина стеклопакета</span>
+                      <span class="feature__value">24/31 мм</span>
+                    </li>
+                    <li>
+                      <span class="feature__name">Воздушные камеры</span>
+                      <span class="feature__value">3</span>
+                    </li>
+                    <li>
+                      <span class="feature__name">Теплосопротивление</span>
+                      <span class="feature__value">0,70 м2С/ВТ</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="products__slider-item">
+            <div class="products__item">
+              <div class="products__item-image">
+                <img src="images/products-img-1.jpg" alt="products-img-1" />
+              </div>
+              <div class="products__description">
+                <div class="products__item-title">Rehau Blitz New 3.1</div>
+                <div class="products__item-text">
+                  Сохраняют тепло в доме, защищают от шума и вписываются в любой
+                  интерьер. <br />
+                  Практичный выбор.
+                </div>
+                <div class="products__item-features">
+                  <ul class="feature__box">
+                    <li>
+                      <span class="feature__name">Системная глубина</span>
+                      <span class="feature__value">60/60 мм</span>
+                    </li>
+                    <li>
+                      <span class="feature__name">Ширина стеклопакета</span>
+                      <span class="feature__value">24/31 мм</span>
+                    </li>
+                    <li>
+                      <span class="feature__name">Воздушные камеры</span>
+                      <span class="feature__value">3</span>
+                    </li>
+                    <li>
+                      <span class="feature__name">Теплосопротивление</span>
+                      <span class="feature__value">0,70 м2С/ВТ</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="products__slider mix category-d">
+          <div class="products__slider-item">
+            <div class="products__item">
+              <div class="products__item-image">
+                <img src="images/products-img-1.jpg" alt="products-img-1" />
+              </div>
+              <div class="products__description">
+                <div class="products__item-title">Exclusive</div>
+                <div class="products__item-text">
+                  Сохраняют тепло в доме, защищают от шума и вписываются в любой
+                  интерьер. <br />
+                  Практичный выбор.
+                </div>
+                <div class="products__item-features">
+                  <ul class="feature__box">
+                    <li>
+                      <span class="feature__name">Системная глубина</span>
+                      <span class="feature__value">60/60 мм</span>
+                    </li>
+                    <li>
+                      <span class="feature__name">Ширина стеклопакета</span>
+                      <span class="feature__value">24/31 мм</span>
+                    </li>
+                    <li>
+                      <span class="feature__name">Воздушные камеры</span>
+                      <span class="feature__value">3</span>
+                    </li>
+                    <li>
+                      <span class="feature__name">Теплосопротивление</span>
+                      <span class="feature__value">0,70 м2С/ВТ</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="products__slider-item">
+            <div class="products__item">
+              <div class="products__item-image">
+                <img src="images/products-img-1.jpg" alt="products-img-1" />
+              </div>
+              <div class="products__description">
+                <div class="products__item-title">Rehau Blitz New 4.1</div>
+                <div class="products__item-text">
+                  Сохраняют тепло в доме, защищают от шума и вписываются в любой
+                  интерьер. <br />
+                  Практичный выбор.
+                </div>
+                <div class="products__item-features">
+                  <ul class="feature__box">
+                    <li>
+                      <span class="feature__name">Системная глубина</span>
+                      <span class="feature__value">60/60 мм</span>
+                    </li>
+                    <li>
+                      <span class="feature__name">Ширина стеклопакета</span>
+                      <span class="feature__value">24/31 мм</span>
+                    </li>
+                    <li>
+                      <span class="feature__name">Воздушные камеры</span>
+                      <span class="feature__value">3</span>
+                    </li>
+                    <li>
+                      <span class="feature__name">Теплосопротивление</span>
+                      <span class="feature__value">0,70 м2С/ВТ</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

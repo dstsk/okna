@@ -71,6 +71,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  margin-bottom: 68px;
 }
 
 .banner__inner {
@@ -224,8 +225,8 @@
 }
 
 // services
-.services__inner {
-  padding: 68px 0;
+.services {
+  margin-bottom: 90px;
 }
 .services__title {
   margin-bottom: 48px;
@@ -289,4 +290,151 @@
       opacity: 1;
     }
   }
+}
+
+// products
+.products {
+  margin-bottom: 100px;
+}
+.products__title {
+  margin-bottom: 34px;
+}
+.products__description {
+  width: 50%;
+  padding: 70px 40px 20px;
+}
+.products__slider {
+  max-width: 1145px;
+  margin: 0 auto;
+}
+.products__item {
+  display: flex;
+  background-color: #fff;
+  border-radius: 3px;
+  padding: 0;
+  &-image {
+    width: 50%;
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      border-top-left-radius: 3px;
+      border-end-start-radius: 3px;
+    }
+  }
+  &-title {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 40px;
+    color: #ef7f04;
+  }
+  &-text {
+    max-width: 400px;
+    font-size: 18px;
+    font-weight: 300;
+    margin-bottom: 40px;
+  }
+  &-features {
+    font-size: 18px;
+  }
+}
+.feature {
+  &__name {
+    font-size: 18px;
+  }
+  &__value {
+    font-size: 18px;
+    font-weight: 700;
+  }
+}
+.feature__box {
+  li {
+    border-bottom: 2px dotted #cfcfcf; /* Необязателен. Здесь задается толщина, тип и цвет точек */
+    position: relative;
+    margin-bottom: 20px; /* Необязателен. Задается для установки расстояния между блоками li */
+  }
+  span {
+    background-color: #fff;
+    bottom: -5px;
+    &.feature__name {
+      position: relative;
+      margin-right: 7em; /* Задается чтобы текст не заходил на номера страниц */
+      padding-right: 2px; /* Необязателен. Задается чтобы точки не подходили вплотную к концу текста */
+    }
+    &.feature__value {
+      position: absolute;
+      right: 0;
+      padding-left: 2px; /* Необязателен. Задается чтобы точки не подходили вплотную к номерам страниц */
+    }
+  }
+}
+
+.products__nav {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+  &-item {
+    background: none;
+    width: 131px;
+    font-size: 18px;
+    line-height: 40px;
+    text-align: center;
+    padding: 0 10px;
+    border: none;
+    border-radius: 3px;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+.mixitup-control-active {
+  background-color: #ef7f1a;
+  color: #fff;
+  font-weight: 700;
+  transition: background-color 0.5s;
+}
+
+.slick-prev::before {
+  position: absolute;
+  top: 0;
+  left: -20px;
+}
+.slick-next::before {
+  position: absolute;
+  top: 0;
+  right: -20px;
+}
+.slick-prev.slick-arrow.slick-disabled {
+  &::before {
+    content: url(../images/slider-arrow-disabled-left.png);
+  }
+}
+.slick-next.slick-arrow.slick-disabled {
+  &::before {
+    content: url(../images/slider-arrow-disabled.png);
+  }
+}
+.slick-prev.slick-arrow {
+  &::before {
+    content: url(../images/slider-arrow-active-left.png);
+  }
+}
+.slick-next.slick-arrow {
+  &::before {
+    content: url(../images/slider-arrow-active.png);
+  }
+}
+.slick-next:hover {
+  &::before {
+    content: url(../images/slider-arrow-hover.png);
+  }
+}
+.slick-prev:hover {
+  &::before {
+    content: url(../images/slider-arrow-hover-left.png);
+  }
+}
+.slick-dots li {
+  width: 25px;
+  height: 25px;
 }
