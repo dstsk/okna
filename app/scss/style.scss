@@ -294,7 +294,7 @@
 
 // products
 .products {
-  margin-bottom: 100px;
+  margin-bottom: 54px;
 }
 .products__title {
   margin-bottom: 34px;
@@ -369,6 +369,7 @@
   }
 }
 
+// products-slider
 .products__nav {
   display: flex;
   justify-content: center;
@@ -437,4 +438,34 @@
 .slick-dots li {
   width: 25px;
   height: 25px;
+}
+
+// benefits
+.benefits {
+  margin-bottom: 50px;
+}
+.benefits__wrapper {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 36px 40px 60px;
+  border-radius: 3px;
+}
+.benefits__title {
+  text-align: center;
+  margin-bottom: 45px;
+}
+.benefits__inner {
+  display: flex;
+  justify-content: space-between;
+}
+.benefits__item {
+  color: #fff;
+  text-align: center;
+  img {
+    margin-bottom: 30px;
+  }
+  p {
+    max-width: 190px;
+  }
 }
