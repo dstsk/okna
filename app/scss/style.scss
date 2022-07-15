@@ -443,6 +443,7 @@
 // benefits
 .benefits {
   margin-bottom: 50px;
+  text-align: center;
 }
 .benefits__wrapper {
   background-size: cover;
@@ -450,9 +451,9 @@
   background-repeat: no-repeat;
   padding: 36px 40px 60px;
   border-radius: 3px;
+  margin-bottom: 56px;
 }
 .benefits__title {
-  text-align: center;
   margin-bottom: 45px;
 }
 .benefits__inner {
@@ -467,5 +468,23 @@
   }
   p {
     max-width: 190px;
+  }
+}
+a.benefits__btn {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 55px;
+  color: #fff;
+  padding: 0 54px 0 76px;
+  border-radius: 3px;
+  position: relative;
+  background-color: #3b3a63;
+  &::before {
+    content: url(../images/calculator.svg);
+    position: absolute;
+    width: 20px;
+    height: 18px;
+    top: 4px;
+    left: 31px;
   }
 }
