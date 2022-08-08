@@ -1,48 +1,155 @@
 $(function () {
   // ----- phone mask -----
   $('#phone').mask('+ 7 (999) 999 99 99')
-})
-// ----- slider -----
-
-const swiperStandard = new Swiper('.swiper-standard', swiperProps('s', 1))
-const swiperBusiness = new Swiper('.swiper-business', swiperProps('b', 1))
-const swiperPremium = new Swiper('.swiper-premium', swiperProps('p', 1))
-const swiperExclusive = new Swiper('.swiper-exclusive', swiperProps('e', 1))
-const swiperReviews = new Swiper('.swiper-reviews', swiperProps('r', 1))
-const swiperSertificates = new Swiper('.swiper-sertificates', {
-  slidesPerView: 5,
-  navigation: {
-    nextEl: `.swiper-button-next-sert`,
-    prevEl: `.swiper-button-prev-sert`,
-    disabledClass: `swiper-button-disabled-sert`,
-  },
-})
-const swiperPortfolio = new Swiper('.swiper-portfolio', {
-  slidesPerView: 4,
-  spaceBetween: 50,
-  navigation: {
-    nextEl: `.swiper-button-next-port`,
-    prevEl: `.swiper-button-prev-port`,
-    disabledClass: `swiper-button-disabled-port`,
-  },
-})
-const swiperPortfolioItem = new Swiper('.swiper-portfolio-item', {
-  pagination: {
-    el: '.swiper-pagination',
-    type: 'bullets',
-  },
+  $('#phone-popup-measure').mask('+ 7 (999) 999 99 99')
+  $('#phone-popup-calc').mask('+ 7 (999) 999 99 99')
 })
 
-function swiperProps(name, slidesPerView) {
+// ----- Popups -----
+
+const popups = document.querySelectorAll('.popup')
+const closeBtns = document.querySelectorAll('.close-popup')
+const btnsMeasure = document.querySelectorAll('.btn-measure')
+const btnsCalc = document.querySelectorAll('.btn-calc')
+const btnVideoPlay = document.querySelector('.about__description-play')
+const servicesTiles = document.querySelector('.services__tiles')
+const servicesPopups = document.querySelectorAll('.popup__services')
+const reviewBtn = document.querySelector('.about__reviews-button')
+
+const closeModal = () => {
+  popups.forEach(p => p.classList.add('hidden'))
+  document.querySelector('.overlay').classList.add('hidden')
+}
+
+const openModal = name => {
+  document.querySelector(name).classList.remove('hidden')
+  document.querySelector('.overlay').classList.remove('hidden')
+}
+
+btnsMeasure.forEach(b =>
+  b.addEventListener('click', e => {
+    e.preventDefault()
+    openModal('.popup__measure')
+  })
+)
+btnsCalc.forEach(b =>
+  b.addEventListener('click', e => {
+    e.preventDefault()
+    openModal('.popup__calc')
+  })
+)
+btnVideoPlay.addEventListener('click', () => {
+  openModal('.popup__video')
+})
+
+closeBtns.forEach(b => b.addEventListener('click', closeModal))
+document.querySelector('.overlay').addEventListener('click', e => {
+  const clicked = e.target
+  if (clicked.classList.contains('overlay')) closeModal()
+})
+
+document.addEventListener('keydown', event => {
+  if (event.key === 'Escape') {
+    if (!popups.forEach(p => p.classList.contains('hidden'))) {
+      closeModal()
+    }
+  }
+})
+
+servicesTiles.addEventListener('click', e => {
+  e.preventDefault()
+  const clicked = e.target.closest('.services__item')
+  if (!clicked) return
+  openModal(`.popup__services--${clicked.dataset.num}`)
+})
+
+reviewBtn.addEventListener('click', e => {
+  e.preventDefault()
+  openModal('.popup__review')
+})
+
+// ----- Sliders -----
+
+const swiperStandard = new Swiper('.swiper-standard', swiperProps('s'))
+const swiperBusiness = new Swiper('.swiper-business', swiperProps('b'))
+const swiperPremium = new Swiper('.swiper-premium', swiperProps('p'))
+const swiperExclusive = new Swiper('.swiper-exclusive', swiperProps('e'))
+const swiperReviews = new Swiper('.swiper-reviews', swiperProps('r'))
+const swiperSertificates = new Swiper(
+  '.swiper-sertificates',
+  swiperProps('sert', 5)
+)
+const swiperPortfolio = new Swiper(
+  '.swiper-portfolio',
+  swiperProps('port', 4, 50)
+)
+const swiperPortfolioItem1 = new Swiper(
+  '.swiper-portfolio-item-1',
+  swiperPortfolioItems('1')
+)
+const swiperPortfolioItem2 = new Swiper(
+  '.swiper-portfolio-item-2',
+  swiperPortfolioItems('2')
+)
+const swiperPortfolioItem3 = new Swiper(
+  '.swiper-portfolio-item-3',
+  swiperPortfolioItems('3')
+)
+const swiperPortfolioItem4 = new Swiper(
+  '.swiper-portfolio-item-4',
+  swiperPortfolioItems('4')
+)
+const swiperPortfolioItem5 = new Swiper(
+  '.swiper-portfolio-item-5',
+  swiperPortfolioItems('5')
+)
+const swiperPortfolioItem6 = new Swiper(
+  '.swiper-portfolio-item-6',
+  swiperPortfolioItems('6')
+)
+const swiperPortfolioItem7 = new Swiper(
+  '.swiper-portfolio-item-7',
+  swiperPortfolioItems('7')
+)
+const swiperPortfolioItem8 = new Swiper(
+  '.swiper-portfolio-item-8',
+  swiperPortfolioItems('8')
+)
+const swiperPortfolioItem9 = new Swiper(
+  '.swiper-portfolio-item-9',
+  swiperPortfolioItems('9')
+)
+const swiperPortfolioItem10 = new Swiper(
+  '.swiper-portfolio-item-10',
+  swiperPortfolioItems('10')
+)
+const swiperPortfolioItem11 = new Swiper(
+  '.swiper-portfolio-item-11',
+  swiperPortfolioItems('11')
+)
+const swiperPortfolioItem12 = new Swiper(
+  '.swiper-portfolio-item-12',
+  swiperPortfolioItems('12')
+)
+
+function swiperProps(name, slidesPerView = 1, spaceBetween = 1) {
   return {
     autoHeight: true,
-    // effect: effect,
     slidesPerView: slidesPerView,
-    // spaceBetween: 11,
+    spaceBetween: spaceBetween,
     navigation: {
       nextEl: `.swiper-button-next-${name}`,
       prevEl: `.swiper-button-prev-${name}`,
       disabledClass: `swiper-button-disabled-${name}`,
+    },
+  }
+}
+
+function swiperPortfolioItems(orderNumber) {
+  return {
+    pagination: {
+      el: `.swiper-pagination-${orderNumber}`,
+      type: 'bullets',
     },
   }
 }

@@ -22,11 +22,10 @@ gulp.task('script', function () {
   return gulp
     .src([
       'node_modules/jquery/dist/jquery.js',
-      'node_modules/slick-carousel/slick/slick.js',
       'node_modules/jquery.maskedinput/src/jquery.maskedinput.js',
-      'node_modules/mixitup/dist/mixitup.js',
       'node_modules/swiper/swiper-bundle.js',
       'node_modules/leaflet/dist/leaflet.js',
+      'node_modules/magnific-popup/dist/jquery.magnific-popup.js',
     ])
     .pipe(concat('libs.min.js'))
     .pipe(uglify())
@@ -37,10 +36,10 @@ gulp.task('script', function () {
 gulp.task('style', function () {
   return gulp.src([
     'node_modules/normalize.css/normalize.css', 
-    'node_modules/slick-carousel/slick/slick.css',
-    'node_modules/slick-carousel/slick/slick-theme.css',
     'node_modules/swiper/swiper-bundle.css',
-    'node_modules/leaflet/dist/leaflet.css'
+    'node_modules/leaflet/dist/leaflet.css',
+    'node_modules/magnific-popup/dist/magnific-popup.css',
+    'node_modules/animate.css/animate.css'
   ])
   .pipe(concat('libs.min.css'))
   .pipe(cssmin())
