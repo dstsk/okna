@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Окна Хаус</title>
+    <link rel="icon" type="image/png" href="images/logo.png" />
     <link rel="stylesheet" href="css/libs.min.css" />
     <link rel="stylesheet" href="css/style.min.css" />
   </head>
@@ -18,27 +19,50 @@
           </a>
           <nav class="menu">
             <ul>
-              <li class="menu__item"><a href="#">Услуги</a></li>
-              <li class="menu__item menu__item--active">
+              <li class="menu__item menu__item--link">
+                <a href="#">Услуги</a>
+              </li>
+              <li class="menu__item menu__item--link menu__item--active">
                 <a href="#">Продукция</a>
               </li>
-              <li class="menu__item"><a href="#">О компании</a></li>
-              <li class="menu__item"><a href="#">Портфолио</a></li>
-              <li class="menu__item"><a href="#">Вопрос-ответ</a></li>
-              <li class="menu__item"><a href="#">Контакты</a></li>
+              <li class="menu__item menu__item--link">
+                <a href="#">О компании</a>
+              </li>
+              <li class="menu__item menu__item--link">
+                <a href="#">Портфолио</a>
+              </li>
+              <li class="menu__item menu__item--link">
+                <a href="#">Вопрос-ответ</a>
+              </li>
+              <li class="menu__item menu__item--link">
+                <a href="#">Контакты</a>
+              </li>
+              <li class="menu__item menu__item--btn menu__item--measure">
+                <a
+                  class="header__btn header__btn-measure btn-measure btn"
+                  href="#"
+                  >Заявка на замер</a
+                >
+              </li>
+              <li class="menu__item menu__item--btn menu__item--calc">
+                <a class="header__btn header__btn-calc btn-calc btn" href="#"
+                  >Заказать расчёт</a
+                >
+              </li>
             </ul>
           </nav>
-          <a class="header__btn header__btn-measure btn-measure btn" href="#"
-            >Заявка на замер</a
-          >
-          <a class="header__btn header__btn-calc btn-calc btn" href="#"
-            >Заказать расчёт</a
-          >
+          <!-- <div class="header__buttons"> -->
+          <a class="header__btn header__btn-menu btn" href="#">
+            <img src="images/burger.svg" alt="" />
+          </a>
+
+          <!-- </div> -->
         </div>
       </div>
     </header>
 
     <!-- banner -->
+    <!--  
     <section class="banner" style="background-image: url(images/banner.png)">
       <div class="container">
         <div class="banner__inner">
@@ -113,7 +137,10 @@
         </div>
       </div>
     </section>
+    -->
 
+    <!-- services -->
+    <!--  
     <section class="services">
       <div class="container">
         <div class="services__title section-title">Наши услуги</div>
@@ -236,11 +263,13 @@
         </div>
       </div>
     </section>
+    -->
 
+    <!-- products -->
+    <!--  
     <section class="products">
       <div class="container">
         <div class="products__title section-title">Продукция</div>
-
         <div class="products__nav">
           <button
             class="products__nav-item products__nav-item--active"
@@ -272,324 +301,393 @@
           </button>
         </div>
 
-        <div
-          class="products__slider-box products__slider-box--active"
-          data-attr="standard"
-        >
-          <div class="swiper swiper-standard products__slider">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide products__slider-item">
-                <div class="products__item">
-                  <div class="products__item-image">
-                    <img src="images/products-img-1.jpg" alt="products-img-1" />
-                  </div>
-                  <div class="products__description">
-                    <div class="products__item-title">Rehau Standard</div>
-                    <div class="products__item-text">
-                      Сохраняют тепло в доме, защищают от шума и вписываются в
-                      любой интерьер. <br />
-                      Практичный выбор.
+        <div class="products__slider-box-wrapper">
+          <div
+            class="products__slider-box products__slider-box--active"
+            data-attr="standard"
+          >
+            <div class="swiper swiper-standard products__slider">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide products__slider-item">
+                  <div class="products__item">
+                    <div class="products__item-image">
+                      <img
+                        src="images/products-img-1.jpg"
+                        alt="products-img-1"
+                      />
                     </div>
-                    <div class="products__item-features">
-                      <ul class="feature__box">
-                        <li>
-                          <span class="feature__name">Системная глубина</span>
-                          <span class="feature__value">60/60 мм</span>
-                        </li>
-                        <li>
-                          <span class="feature__name">Ширина стеклопакета</span>
-                          <span class="feature__value">24/31 мм</span>
-                        </li>
-                        <li>
-                          <span class="feature__name">Воздушные камеры</span>
-                          <span class="feature__value">3</span>
-                        </li>
-                        <li>
-                          <span class="feature__name">Теплосопротивление</span>
-                          <span class="feature__value">0,70 м2С/ВТ</span>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide products__slider-item">
-                <div class="products__item">
-                  <div class="products__item-image">
-                    <img src="images/products-img-1.jpg" alt="products-img-1" />
-                  </div>
-                  <div class="products__description">
-                    <div class="products__item-title">Rehau Blitz New 1.1</div>
-                    <div class="products__item-text">
-                      Сохраняют тепло в доме, защищают от шума и вписываются в
-                      любой интерьер. <br />
-                      Практичный выбор.
-                    </div>
-                    <div class="products__item-features">
-                      <ul class="feature__box">
-                        <li>
-                          <span class="feature__name">Системная глубина</span>
-                          <span class="feature__value">60/60 мм</span>
-                        </li>
-                        <li>
-                          <span class="feature__name">Ширина стеклопакета</span>
-                          <span class="feature__value">24/31 мм</span>
-                        </li>
-                        <li>
-                          <span class="feature__name">Воздушные камеры</span>
-                          <span class="feature__value">3</span>
-                        </li>
-                        <li>
-                          <span class="feature__name">Теплосопротивление</span>
-                          <span class="feature__value">0,70 м2С/ВТ</span>
-                        </li>
-                      </ul>
+                    <div class="products__description">
+                      <div class="products__item-title">Rehau Standard</div>
+                      <div class="products__item-text">
+                        Сохраняют тепло в доме, защищают от шума и вписываются в
+                        любой интерьер. <br />
+                        Практичный выбор.
+                      </div>
+                      <div class="products__item-features">
+                        <ul class="feature__box">
+                          <li>
+                            <span class="feature__name">Системная глубина</span>
+                            <span class="feature__value">60/60 мм</span>
+                          </li>
+                          <li>
+                            <span class="feature__name"
+                              >Ширина стеклопакета</span
+                            >
+                            <span class="feature__value">24/31 мм</span>
+                          </li>
+                          <li>
+                            <span class="feature__name">Воздушные камеры</span>
+                            <span class="feature__value">3</span>
+                          </li>
+                          <li>
+                            <span class="feature__name"
+                              >Теплосопротивление</span
+                            >
+                            <span class="feature__value">0,70 м2С/ВТ</span>
+                          </li>
+                        </ul>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-button-prev-s"></div>
-          <div class="swiper-button-next-s"></div>
-        </div>
-        <div class="products__slider-box" data-attr="business">
-          <div class="swiper swiper-business products__slider">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide products__slider-item">
-                <div class="products__item">
-                  <div class="products__item-image">
-                    <img src="images/products-img-1.jpg" alt="products-img-1" />
-                  </div>
-                  <div class="products__description">
-                    <div class="products__item-title">Rehau Business</div>
-                    <div class="products__item-text">
-                      Сохраняют тепло в доме, защищают от шума и вписываются в
-                      любой интерьер. <br />
-                      Практичный выбор.
+                <div class="swiper-slide products__slider-item">
+                  <div class="products__item">
+                    <div class="products__item-image">
+                      <img
+                        src="images/products-img-1.jpg"
+                        alt="products-img-1"
+                      />
                     </div>
-                    <div class="products__item-features">
-                      <ul class="feature__box">
-                        <li>
-                          <span class="feature__name">Системная глубина</span>
-                          <span class="feature__value">60/60 мм</span>
-                        </li>
-                        <li>
-                          <span class="feature__name">Ширина стеклопакета</span>
-                          <span class="feature__value">24/31 мм</span>
-                        </li>
-                        <li>
-                          <span class="feature__name">Воздушные камеры</span>
-                          <span class="feature__value">3</span>
-                        </li>
-                        <li>
-                          <span class="feature__name">Теплосопротивление</span>
-                          <span class="feature__value">0,70 м2С/ВТ</span>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide products__slider-item">
-                <div class="products__item">
-                  <div class="products__item-image">
-                    <img src="images/products-img-1.jpg" alt="products-img-1" />
-                  </div>
-                  <div class="products__description">
-                    <div class="products__item-title">Rehau Blitz New 2.1</div>
-                    <div class="products__item-text">
-                      Сохраняют тепло в доме, защищают от шума и вписываются в
-                      любой интерьер. <br />
-                      Практичный выбор.
-                    </div>
-                    <div class="products__item-features">
-                      <ul class="feature__box">
-                        <li>
-                          <span class="feature__name">Системная глубина</span>
-                          <span class="feature__value">60/60 мм</span>
-                        </li>
-                        <li>
-                          <span class="feature__name">Ширина стеклопакета</span>
-                          <span class="feature__value">24/31 мм</span>
-                        </li>
-                        <li>
-                          <span class="feature__name">Воздушные камеры</span>
-                          <span class="feature__value">3</span>
-                        </li>
-                        <li>
-                          <span class="feature__name">Теплосопротивление</span>
-                          <span class="feature__value">0,70 м2С/ВТ</span>
-                        </li>
-                      </ul>
+                    <div class="products__description">
+                      <div class="products__item-title">
+                        Rehau Blitz New 1.1
+                      </div>
+                      <div class="products__item-text">
+                        Сохраняют тепло в доме, защищают от шума и вписываются в
+                        любой интерьер. <br />
+                        Практичный выбор.
+                      </div>
+                      <div class="products__item-features">
+                        <ul class="feature__box">
+                          <li>
+                            <span class="feature__name">Системная глубина</span>
+                            <span class="feature__value">60/60 мм</span>
+                          </li>
+                          <li>
+                            <span class="feature__name"
+                              >Ширина стеклопакета</span
+                            >
+                            <span class="feature__value">24/31 мм</span>
+                          </li>
+                          <li>
+                            <span class="feature__name">Воздушные камеры</span>
+                            <span class="feature__value">3</span>
+                          </li>
+                          <li>
+                            <span class="feature__name"
+                              >Теплосопротивление</span
+                            >
+                            <span class="feature__value">0,70 м2С/ВТ</span>
+                          </li>
+                        </ul>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
+            <div class="swiper-button-prev-s"></div>
+            <div class="swiper-button-next-s"></div>
           </div>
-          <div class="swiper-button-prev-b"></div>
-          <div class="swiper-button-next-b"></div>
-        </div>
-        <div class="products__slider-box" data-attr="premium">
-          <div class="swiper swiper-premium products__slider">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide products__slider-item">
-                <div class="products__item">
-                  <div class="products__item-image">
-                    <img src="images/products-img-1.jpg" alt="products-img-1" />
-                  </div>
-                  <div class="products__description">
-                    <div class="products__item-title">Rehau Premium</div>
-                    <div class="products__item-text">
-                      Сохраняют тепло в доме, защищают от шума и вписываются в
-                      любой интерьер. <br />
-                      Практичный выбор.
+          <div class="products__slider-box" data-attr="business">
+            <div class="swiper swiper-business products__slider">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide products__slider-item">
+                  <div class="products__item">
+                    <div class="products__item-image">
+                      <img
+                        src="images/products-img-1.jpg"
+                        alt="products-img-1"
+                      />
                     </div>
-                    <div class="products__item-features">
-                      <ul class="feature__box">
-                        <li>
-                          <span class="feature__name">Системная глубина</span>
-                          <span class="feature__value">60/60 мм</span>
-                        </li>
-                        <li>
-                          <span class="feature__name">Ширина стеклопакета</span>
-                          <span class="feature__value">24/31 мм</span>
-                        </li>
-                        <li>
-                          <span class="feature__name">Воздушные камеры</span>
-                          <span class="feature__value">3</span>
-                        </li>
-                        <li>
-                          <span class="feature__name">Теплосопротивление</span>
-                          <span class="feature__value">0,70 м2С/ВТ</span>
-                        </li>
-                      </ul>
+                    <div class="products__description">
+                      <div class="products__item-title">Rehau Business</div>
+                      <div class="products__item-text">
+                        Сохраняют тепло в доме, защищают от шума и вписываются в
+                        любой интерьер. <br />
+                        Практичный выбор.
+                      </div>
+                      <div class="products__item-features">
+                        <ul class="feature__box">
+                          <li>
+                            <span class="feature__name">Системная глубина</span>
+                            <span class="feature__value">60/60 мм</span>
+                          </li>
+                          <li>
+                            <span class="feature__name"
+                              >Ширина стеклопакета</span
+                            >
+                            <span class="feature__value">24/31 мм</span>
+                          </li>
+                          <li>
+                            <span class="feature__name">Воздушные камеры</span>
+                            <span class="feature__value">3</span>
+                          </li>
+                          <li>
+                            <span class="feature__name"
+                              >Теплосопротивление</span
+                            >
+                            <span class="feature__value">0,70 м2С/ВТ</span>
+                          </li>
+                        </ul>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div class="swiper-slide products__slider-item">
-                <div class="products__item">
-                  <div class="products__item-image">
-                    <img src="images/products-img-1.jpg" alt="products-img-1" />
-                  </div>
-                  <div class="products__description">
-                    <div class="products__item-title">Rehau Blitz New 3.1</div>
-                    <div class="products__item-text">
-                      Сохраняют тепло в доме, защищают от шума и вписываются в
-                      любой интерьер. <br />
-                      Практичный выбор.
+                <div class="swiper-slide products__slider-item">
+                  <div class="products__item">
+                    <div class="products__item-image">
+                      <img
+                        src="images/products-img-1.jpg"
+                        alt="products-img-1"
+                      />
                     </div>
-                    <div class="products__item-features">
-                      <ul class="feature__box">
-                        <li>
-                          <span class="feature__name">Системная глубина</span>
-                          <span class="feature__value">60/60 мм</span>
-                        </li>
-                        <li>
-                          <span class="feature__name">Ширина стеклопакета</span>
-                          <span class="feature__value">24/31 мм</span>
-                        </li>
-                        <li>
-                          <span class="feature__name">Воздушные камеры</span>
-                          <span class="feature__value">3</span>
-                        </li>
-                        <li>
-                          <span class="feature__name">Теплосопротивление</span>
-                          <span class="feature__value">0,70 м2С/ВТ</span>
-                        </li>
-                      </ul>
+                    <div class="products__description">
+                      <div class="products__item-title">
+                        Rehau Blitz New 2.1
+                      </div>
+                      <div class="products__item-text">
+                        Сохраняют тепло в доме, защищают от шума и вписываются в
+                        любой интерьер. <br />
+                        Практичный выбор.
+                      </div>
+                      <div class="products__item-features">
+                        <ul class="feature__box">
+                          <li>
+                            <span class="feature__name">Системная глубина</span>
+                            <span class="feature__value">60/60 мм</span>
+                          </li>
+                          <li>
+                            <span class="feature__name"
+                              >Ширина стеклопакета</span
+                            >
+                            <span class="feature__value">24/31 мм</span>
+                          </li>
+                          <li>
+                            <span class="feature__name">Воздушные камеры</span>
+                            <span class="feature__value">3</span>
+                          </li>
+                          <li>
+                            <span class="feature__name"
+                              >Теплосопротивление</span
+                            >
+                            <span class="feature__value">0,70 м2С/ВТ</span>
+                          </li>
+                        </ul>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
+            <div class="swiper-button-prev-b"></div>
+            <div class="swiper-button-next-b"></div>
           </div>
-          <div class="swiper-button-prev-p"></div>
-          <div class="swiper-button-next-p"></div>
-        </div>
-        <div class="products__slider-box" data-attr="exclusive">
-          <div class="swiper swiper-exclusive products__slider">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide products__slider-item">
-                <div class="products__item">
-                  <div class="products__item-image">
-                    <img src="images/products-img-1.jpg" alt="products-img-1" />
-                  </div>
-                  <div class="products__description">
-                    <div class="products__item-title">Rehau Exclusive</div>
-                    <div class="products__item-text">
-                      Сохраняют тепло в доме, защищают от шума и вписываются в
-                      любой интерьер. <br />
-                      Практичный выбор.
+          <div class="products__slider-box" data-attr="premium">
+            <div class="swiper swiper-premium products__slider">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide products__slider-item">
+                  <div class="products__item">
+                    <div class="products__item-image">
+                      <img
+                        src="images/products-img-1.jpg"
+                        alt="products-img-1"
+                      />
                     </div>
-                    <div class="products__item-features">
-                      <ul class="feature__box">
-                        <li>
-                          <span class="feature__name">Системная глубина</span>
-                          <span class="feature__value">60/60 мм</span>
-                        </li>
-                        <li>
-                          <span class="feature__name">Ширина стеклопакета</span>
-                          <span class="feature__value">24/31 мм</span>
-                        </li>
-                        <li>
-                          <span class="feature__name">Воздушные камеры</span>
-                          <span class="feature__value">3</span>
-                        </li>
-                        <li>
-                          <span class="feature__name">Теплосопротивление</span>
-                          <span class="feature__value">0,70 м2С/ВТ</span>
-                        </li>
-                      </ul>
+                    <div class="products__description">
+                      <div class="products__item-title">Rehau Premium</div>
+                      <div class="products__item-text">
+                        Сохраняют тепло в доме, защищают от шума и вписываются в
+                        любой интерьер. <br />
+                        Практичный выбор.
+                      </div>
+                      <div class="products__item-features">
+                        <ul class="feature__box">
+                          <li>
+                            <span class="feature__name">Системная глубина</span>
+                            <span class="feature__value">60/60 мм</span>
+                          </li>
+                          <li>
+                            <span class="feature__name"
+                              >Ширина стеклопакета</span
+                            >
+                            <span class="feature__value">24/31 мм</span>
+                          </li>
+                          <li>
+                            <span class="feature__name">Воздушные камеры</span>
+                            <span class="feature__value">3</span>
+                          </li>
+                          <li>
+                            <span class="feature__name"
+                              >Теплосопротивление</span
+                            >
+                            <span class="feature__value">0,70 м2С/ВТ</span>
+                          </li>
+                        </ul>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div class="swiper-slide products__slider-item">
-                <div class="products__item">
-                  <div class="products__item-image">
-                    <img src="images/products-img-1.jpg" alt="products-img-1" />
-                  </div>
-                  <div class="products__description">
-                    <div class="products__item-title">Rehau Blitz New 4.1</div>
-                    <div class="products__item-text">
-                      Сохраняют тепло в доме, защищают от шума и вписываются в
-                      любой интерьер. <br />
-                      Практичный выбор.
+                <div class="swiper-slide products__slider-item">
+                  <div class="products__item">
+                    <div class="products__item-image">
+                      <img
+                        src="images/products-img-1.jpg"
+                        alt="products-img-1"
+                      />
                     </div>
-                    <div class="products__item-features">
-                      <ul class="feature__box">
-                        <li>
-                          <span class="feature__name">Системная глубина</span>
-                          <span class="feature__value">60/60 мм</span>
-                        </li>
-                        <li>
-                          <span class="feature__name">Ширина стеклопакета</span>
-                          <span class="feature__value">24/31 мм</span>
-                        </li>
-                        <li>
-                          <span class="feature__name">Воздушные камеры</span>
-                          <span class="feature__value">3</span>
-                        </li>
-                        <li>
-                          <span class="feature__name">Теплосопротивление</span>
-                          <span class="feature__value">0,70 м2С/ВТ</span>
-                        </li>
-                      </ul>
+                    <div class="products__description">
+                      <div class="products__item-title">
+                        Rehau Blitz New 3.1
+                      </div>
+                      <div class="products__item-text">
+                        Сохраняют тепло в доме, защищают от шума и вписываются в
+                        любой интерьер. <br />
+                        Практичный выбор.
+                      </div>
+                      <div class="products__item-features">
+                        <ul class="feature__box">
+                          <li>
+                            <span class="feature__name">Системная глубина</span>
+                            <span class="feature__value">60/60 мм</span>
+                          </li>
+                          <li>
+                            <span class="feature__name"
+                              >Ширина стеклопакета</span
+                            >
+                            <span class="feature__value">24/31 мм</span>
+                          </li>
+                          <li>
+                            <span class="feature__name">Воздушные камеры</span>
+                            <span class="feature__value">3</span>
+                          </li>
+                          <li>
+                            <span class="feature__name"
+                              >Теплосопротивление</span
+                            >
+                            <span class="feature__value">0,70 м2С/ВТ</span>
+                          </li>
+                        </ul>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
+            <div class="swiper-button-prev-p"></div>
+            <div class="swiper-button-next-p"></div>
           </div>
-          <div class="swiper-button-prev-e"></div>
-          <div class="swiper-button-next-e"></div>
+          <div class="products__slider-box" data-attr="exclusive">
+            <div class="swiper swiper-exclusive products__slider">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide products__slider-item">
+                  <div class="products__item">
+                    <div class="products__item-image">
+                      <img
+                        src="images/products-img-1.jpg"
+                        alt="products-img-1"
+                      />
+                    </div>
+                    <div class="products__description">
+                      <div class="products__item-title">Rehau Exclusive</div>
+                      <div class="products__item-text">
+                        Сохраняют тепло в доме, защищают от шума и вписываются в
+                        любой интерьер. <br />
+                        Практичный выбор.
+                      </div>
+                      <div class="products__item-features">
+                        <ul class="feature__box">
+                          <li>
+                            <span class="feature__name">Системная глубина</span>
+                            <span class="feature__value">60/60 мм</span>
+                          </li>
+                          <li>
+                            <span class="feature__name"
+                              >Ширина стеклопакета</span
+                            >
+                            <span class="feature__value">24/31 мм</span>
+                          </li>
+                          <li>
+                            <span class="feature__name">Воздушные камеры</span>
+                            <span class="feature__value">3</span>
+                          </li>
+                          <li>
+                            <span class="feature__name"
+                              >Теплосопротивление</span
+                            >
+                            <span class="feature__value">0,70 м2С/ВТ</span>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide products__slider-item">
+                  <div class="products__item">
+                    <div class="products__item-image">
+                      <img
+                        src="images/products-img-1.jpg"
+                        alt="products-img-1"
+                      />
+                    </div>
+                    <div class="products__description">
+                      <div class="products__item-title">
+                        Rehau Blitz New 4.1
+                      </div>
+                      <div class="products__item-text">
+                        Сохраняют тепло в доме, защищают от шума и вписываются в
+                        любой интерьер. <br />
+                        Практичный выбор.
+                      </div>
+                      <div class="products__item-features">
+                        <ul class="feature__box">
+                          <li>
+                            <span class="feature__name">Системная глубина</span>
+                            <span class="feature__value">60/60 мм</span>
+                          </li>
+                          <li>
+                            <span class="feature__name"
+                              >Ширина стеклопакета</span
+                            >
+                            <span class="feature__value">24/31 мм</span>
+                          </li>
+                          <li>
+                            <span class="feature__name">Воздушные камеры</span>
+                            <span class="feature__value">3</span>
+                          </li>
+                          <li>
+                            <span class="feature__name"
+                              >Теплосопротивление</span
+                            >
+                            <span class="feature__value">0,70 м2С/ВТ</span>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-button-prev-e"></div>
+            <div class="swiper-button-next-e"></div>
+          </div>
         </div>
       </div>
     </section>
+    -->
 
+    <!-- benefits -->
+    <!--  
     <section class="benefits">
       <div class="container">
         <div
@@ -625,7 +723,10 @@
       </div>
       <a class="benefits__btn btn-calc btn" href="#">Заказать расчёт</a>
     </section>
+    -->
 
+    <!-- about -->
+    <!--  
     <section class="about">
       <div class="container">
         <div class="about__title section-title">О компании</div>
@@ -651,7 +752,6 @@
             Сертификаты
           </button>
         </div>
-
         <div
           class="about__slider-box about__slider-box--active"
           data-attr="description"
@@ -682,7 +782,6 @@
             </div>
           </div>
         </div>
-
         <div class="about__slider-box" data-attr="algorithm">
           <div class="about__algorithm">
             <div class="about__algorithm-title section-title">
@@ -817,7 +916,6 @@
           <div class="swiper-button-prev-r"></div>
           <div class="swiper-button-next-r"></div>
         </div>
-
         <div class="about__slider-box" data-attr="sertificates">
           <div class="about__sertificates-wrapper">
             <div class="about__sertificates swiper swiper-sertificates">
@@ -908,6 +1006,7 @@
           <div class="swiper-button-prev-sert"></div>
           <div class="swiper-button-next-sert"></div>
         </div>
+
         <div class="about__benefits">
           <div class="about__benefits-item">
             <img
@@ -984,7 +1083,10 @@
         >
       </div>
     </section>
+    -->
 
+    <!-- portfolio -->
+    <!--  
     <section class="portfolio">
       <div class="container">
         <div
@@ -1746,7 +1848,10 @@
         <div id="map"></div>
       </div>
     </section>
+    -->
 
+    <!-- faq -->
+    <!--  
     <section class="faq">
       <div class="container">
         <div class="faq__wrapper">
@@ -1897,7 +2002,10 @@
         </div>
       </div>
     </section>
+    -->
 
+    <!-- contacts -->
+    <!--  
     <section class="contacts">
       <div class="container">
         <div class="contacts__title section-title">Контакты</div>
@@ -2001,7 +2109,10 @@
         </div>
       </div>
     </section>
+    -->
 
+    <!-- footer -->
+    <!--  
     <footer class="footer">
       <div class="container">
         <div class="footer__wrapper">
@@ -2018,7 +2129,10 @@
         </div>
       </div>
     </footer>
+    -->
 
+    <!-- popups -->
+    <!--  
     <div class="overlay hidden">
       <div class="popup__measure popup hidden">
         <form class="measure__form" action="#" method="get">
@@ -2834,7 +2948,7 @@
         </button>
       </div>
     </div>
-
+    -->
     <script src="js/libs.min.js"></script>
     <script src="js/main.js"></script>
   </body>

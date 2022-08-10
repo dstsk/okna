@@ -3,8 +3,29 @@ $(function () {
   $('#phone').mask('+ 7 (999) 999 99 99')
   $('#phone-popup-measure').mask('+ 7 (999) 999 99 99')
   $('#phone-popup-calc').mask('+ 7 (999) 999 99 99')
-})
 
+  $('.header__btn-menu').on('click', function () {
+    $('.menu').slideToggle('linear')
+  })
+
+  //   if (widthWind < 451) {
+  //     $('.header__btn-menu').on('click', function () {
+
+  //     })
+
+  //     // headerMenuBtn.addEventListener('click', () => {
+  //     //   if (headerMeasureBtn.style.display === 'block') {
+  //     //     headerMeasureBtn.style.display = 'none'
+  //     //   } else {
+  //     //     headerMeasureBtn.style.display = 'block'
+  //     //   }
+
+  //     // headerCalcBtn.style.display = 'block'
+  //     // })
+  //   }
+  // })
+})
+/*
 // ----- Popups -----
 
 const popups = document.querySelectorAll('.popup')
@@ -353,3 +374,48 @@ faqItemsContainer.addEventListener('click', e => {
     clicked.querySelector('.faq__arrow').classList.add('faq__arrow--active')
   }
 })
+
+
+// const menuBtn = document.querySelector('.header__btn-menu')
+// const menu = document.querySelector('.menu')
+// let menuIsOpen
+
+// menuBtn.addEventListener('click', () => {
+//   console.log(menuIsOpen)
+//   if (menuIsOpen) {
+//     menu.style.display = 'none'
+//     menuIsOpen = false
+//   } else if (!menuIsOpen) {
+//     menu.style.display = 'block'
+//     menuIsOpen = true
+//   }
+// })
+*/
+const headerMenuBtn = document.querySelector('.header__btn-menu')
+const headerMeasureBtn = document.querySelector('.header__btn-measure')
+const headerCalcBtn = document.querySelector('.header__btn-calc')
+
+// const mql = window.matchMedia('(max-width: 451px)')
+
+// mql.addEventListener('change', e => {
+//   if (e.matches) {
+//     headerMenuBtn.addEventListener('click', () => {
+//       if (headerMeasureBtn.style.display === 'block') {
+//         headerMeasureBtn.style.display = 'none'
+//       } else {
+//         headerMeasureBtn.style.display = 'block'
+//       }
+
+//       // headerCalcBtn.style.display = 'block'
+//     })
+//   }
+// })
+
+// el.addEventListener('click', function() {
+//   if(this.style.backgroundColor === 'blue') {
+//     this.style.backgroundColor = '';
+//   }
+//   else {
+//     this.style.backgroundColor = 'blue';
+//   }
+// });

@@ -1,0 +1,95 @@
+@media (max-width: 1240px) {
+  .header {
+    min-height: 60px;
+  }
+  .menu ul {
+    gap: 15px;
+  }
+  .menu li {
+    font-size: 12px;
+    line-height: 56px;
+  }
+  .logo img {
+    width: 50px;
+  }
+  .header__btn {
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 30px;
+    color: #fff;
+    padding: 0 19px;
+    border-radius: 3px;
+    position: relative;
+  }
+  .header__btn-measure {
+    background-color: #ef7f04;
+    &::before {
+      content: '';
+    }
+  }
+  .header__btn-calc {
+    background-color: #3b3a63;
+    &::before {
+      content: '';
+    }
+  }
+}
+
+@media (max-width: 1020px) {
+  .menu li {
+    margin-right: 13px;
+    &.menu__item--measure {
+      margin-right: 10px;
+      margin-left: 25px;
+    }
+  }
+}
+
+@media (max-width: 865px) {
+  .header__inner {
+    min-height: 60px;
+  }
+  .menu {
+    width: 100%;
+    display: none;
+    background-color: #fff;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    ul {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      gap: 0;
+    }
+    li {
+      display: block;
+      width: 100%;
+      a {
+        width: 100%;
+      }
+    }
+  }
+  .header__btn-menu {
+    margin-top: 4px;
+    margin-left: 10px;
+    display: block;
+  }
+  .menu__item.menu__item--btn {
+    display: block;
+    border: none;
+  }
+  .menu__item.menu__item--btn.menu__item--measure {
+    margin: 0;
+  }
+  .header__btn {
+    line-height: 56px;
+  }
+}
+
+// ------------------- MIN-WIDTH ----------------------
+@media (min-width: 866px) {
+  .menu {
+    display: block !important;
+  }
+}
