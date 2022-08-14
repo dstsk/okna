@@ -776,9 +776,7 @@
 .services__tiles {
   display: flex;
   flex-wrap: wrap;
-  &:last-child + title {
-    color: red;
-  }
+  gap: 10px;
 }
 .services__item {
   background-position: center, center;
@@ -786,14 +784,10 @@
   background-size: cover, cover;
   width: 595px;
   padding: 55px 50px 35px;
-  margin-bottom: 10px;
   position: relative;
   border-radius: 3px;
   color: #2f2f51;
   transition: all 0.3s;
-  &:nth-child(odd) {
-    margin-right: 10px;
-  }
   &-titlebox {
     display: flex;
     align-items: center;
