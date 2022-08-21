@@ -1,3 +1,29 @@
+@media (max-width: 1300px) {
+  .swiper-button-prev-s,
+  .swiper-button-prev-b,
+  .swiper-button-prev-p,
+  .swiper-button-prev-e,
+  // .swiper-button-prev-r,
+  .swiper-button-prev-sert,
+  .swiper-button-prev-port {
+    left: 70px;
+    z-index: 100;
+  }
+  .swiper-button-next-s,
+  .swiper-button-next-b,
+  .swiper-button-next-p,
+  .swiper-button-next-e,
+  // .swiper-button-next-r,
+  .swiper-button-next-sert,
+  .swiper-button-next-port {
+    right: 70px;
+    z-index: 100;
+  }
+  .products__description {
+    padding: 70px 80px 20px 40px;
+  }
+}
+
 @media (max-width: 1240px) {
   //header
   .header {
@@ -69,6 +95,52 @@
   .services__item-titlebox {
     padding-right: 275px;
   }
+
+  //products
+  .swiper-button-prev-s,
+  .swiper-button-prev-b,
+  .swiper-button-prev-p,
+  .swiper-button-prev-e,
+  // .swiper-button-prev-r,
+  .swiper-button-prev-sert,
+  .swiper-button-prev-port {
+    left: 60px;
+  }
+  .swiper-button-next-s,
+  .swiper-button-next-b,
+  .swiper-button-next-p,
+  .swiper-button-next-e,
+  // .swiper-button-next-r,
+  .swiper-button-next-sert,
+  .swiper-button-next-port {
+    right: 60px;
+  }
+  .products__description {
+    padding: 70px 100px 20px 40px;
+  }
+
+  //about
+  .about__algorithm-inner {
+    width: 80%;
+    margin: 0 auto;
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+  .about__algorithm-img {
+    margin-bottom: 8px;
+  }
+  .about__reviews-text {
+    padding: 0 80px;
+  }
+  .about__benefits {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 20px;
+  }
+  .about__sertificates-wrapper {
+    padding: 0 92px 0 100px;
+  }
 }
 
 @media (max-width: 1020px) {
@@ -83,6 +155,50 @@
   //services
   .services__item-titlebox {
     padding-right: 150px;
+  }
+
+  //products
+  .swiper-button-prev-s,
+  .swiper-button-prev-b,
+  .swiper-button-prev-p,
+  .swiper-button-prev-e,
+  // .swiper-button-prev-r,
+  .swiper-button-prev-sert,
+  .swiper-button-prev-port {
+    left: 35px;
+  }
+  .swiper-button-next-s,
+  .swiper-button-next-b,
+  .swiper-button-next-p,
+  .swiper-button-next-e,
+  // .swiper-button-next-r,
+  .swiper-button-next-sert,
+  .swiper-button-next-port {
+    right: 35px;
+  }
+  .products__description {
+    padding: 50px 80px 20px 40px;
+  }
+
+  //about
+  .about__description-left {
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .about__description-logo {
+    display: block;
+  }
+  .about__description-text {
+    padding: 0;
+  }
+  .about__reviews-header {
+    flex-direction: column;
+  }
+  .about__reviews-name {
+    margin-bottom: 10px;
+  }
+  .about__reviews-text {
+    padding: 0 40px;
   }
 }
 
@@ -144,7 +260,78 @@
     box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
   }
   .services__item-titlebox {
-    padding-right: 50px;
+    padding-right: 20px;
+  }
+
+  //products
+  .swiper-button-prev-s,
+  .swiper-button-prev-b,
+  .swiper-button-prev-p,
+  .swiper-button-prev-e,
+  // .swiper-button-prev-r,
+  // .swiper-button-prev-sert,
+  .swiper-button-prev-port,
+  .swiper-button-next-s,
+  .swiper-button-next-b,
+  .swiper-button-next-p,
+  .swiper-button-next-e,
+  // .swiper-button-next-r,
+  // .swiper-button-next-sert,
+  .swiper-button-next-port {
+    top: 380px;
+  }
+  .products__item {
+    align-items: center;
+    flex-direction: column;
+  }
+  .products__item-title,
+  .products__item-text {
+    text-align: center;
+  }
+  .products__item-image {
+    width: 100%;
+    img {
+      height: 350px;
+    }
+  }
+  .products__description {
+    width: 80%;
+    padding: 30px 40px 20px;
+  }
+
+  //about
+  .about__description {
+    flex-direction: column;
+  }
+  .about__description-left {
+    flex-direction: row;
+    align-items: center;
+    gap: 50px;
+    width: 100%;
+  }
+  .about__description-logo {
+    height: 100%;
+  }
+  .about__description-right {
+    height: 310px;
+    width: 100%;
+  }
+  .about__nav {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 7px;
+  }
+  .about__algorithm-inner {
+    width: 100%;
+  }
+  .about__reviews-text {
+    padding: 0 10px;
+  }
+  .about__benefits {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .about__benefits-img.img-slim {
+    margin-left: 27px;
   }
 }
 
@@ -211,6 +398,49 @@
   .services__item-titlebox {
     padding-right: 0;
   }
+
+  //products
+  .products__nav {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 7px;
+  }
+
+  //benefits
+  .benefits__wrapper {
+    padding: 36px 30px 60px;
+  }
+
+  //about
+  .about__description-logo img {
+    width: 100px;
+  }
+  .about__algorithm {
+    padding: 70px 30px 50px;
+  }
+  .about__reviews-header {
+    margin-bottom: 40px;
+  }
+  .about__algorithm-inner {
+    grid-template-columns: 1fr;
+  }
+  .about__reviews-item-inner {
+    padding: 63px 102px 150px;
+  }
+  .about__algorithm-item {
+    margin-bottom: 30px;
+  }
+  .about__reviews-button-wrapper {
+    position: absolute;
+    top: initial;
+    bottom: 50px;
+    right: 50%;
+    transform: translate(50%);
+    z-index: 5;
+  }
+  .about__reviews-text {
+    padding: 0px;
+  }
 }
 
 @media (max-width: 500px) {
@@ -220,12 +450,92 @@
   .services__item-title {
     font-size: 20px;
   }
+
+  .feature__box span {
+    font-size: 14px;
+  }
   .services__item-titlebox {
     margin-bottom: 10px;
   }
   .services__item-text {
     font-size: 14px;
     padding-right: 50px;
+  }
+
+  //products
+  .products__nav-item {
+    font-size: 16px;
+  }
+  .products__item-title {
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+  .products__item-text {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  .feature__box li {
+    margin-bottom: 7px;
+  }
+
+  //benefits
+  .benefits__wrapper {
+    padding: 36px 0px 60px;
+  }
+
+  //about
+  .about__description {
+    gap: 0;
+  }
+  .about__description-logo {
+    display: none;
+  }
+  .about__nav-item {
+    font-size: 16px;
+  }
+  .about__nav {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 7px;
+  }
+  .about__reviews-header {
+    margin-left: 0px;
+  }
+  .about__reviews-text {
+    font-size: 13px;
+  }
+  .about__reviews-item-inner {
+    padding: 63px 50px 150px;
+  }
+
+  .swiper-button-prev-r {
+    left: 30px;
+  }
+  .swiper-button-next-r {
+    right: 30px;
+  }
+  .about__reviews-button {
+    padding: 0 18px;
+  }
+  .about__reviews-button::before {
+    content: '';
+  }
+  .about__benefits-item {
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  .about__benefits-img {
+    margin-right: 0;
+  }
+  .about__sertificates-wrapper {
+    padding: 0 60px;
+  }
+  .about__sertificates-item-inner {
+    padding: 60px 0;
+  }
+  .about__benefits-img.img-slim {
+    margin-left: 0px;
   }
 }
 

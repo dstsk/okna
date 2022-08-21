@@ -88,7 +88,7 @@ reviewBtn.addEventListener('click', e => {
   e.preventDefault()
   openModal('.popup__review')
 })
-
+*/
 // ----- Sliders -----
 
 const swiperStandard = new Swiper('.swiper-standard', swiperProps('s'))
@@ -96,10 +96,10 @@ const swiperBusiness = new Swiper('.swiper-business', swiperProps('b'))
 const swiperPremium = new Swiper('.swiper-premium', swiperProps('p'))
 const swiperExclusive = new Swiper('.swiper-exclusive', swiperProps('e'))
 const swiperReviews = new Swiper('.swiper-reviews', swiperProps('r'))
-const swiperSertificates = new Swiper(
-  '.swiper-sertificates',
-  swiperProps('sert', 5)
-)
+// const swiperSertificates = new Swiper(
+//   '.swiper-sertificates',
+//   swiperProps('sert', 5)
+// )
 const swiperPortfolio = new Swiper(
   '.swiper-portfolio',
   swiperProps('port', 4, 50)
@@ -175,6 +175,33 @@ function swiperPortfolioItems(orderNumber) {
   }
 }
 
+const swiperSertificates = new Swiper('.swiper-sertificates', {
+  autoHeight: true,
+  slidesPerView: 1,
+  spaceBetween: 25,
+  navigation: {
+    nextEl: `.swiper-button-next-sert`,
+    prevEl: `.swiper-button-prev-sert`,
+    disabledClass: `swiper-button-disabled-sert`,
+  },
+  breakpoints: {
+    // when window width is >= 320px
+    680: {
+      slidesPerView: 2,
+    },
+    // when window width is >= 480px
+    // 865: {
+    //   slidesPerView: 3,
+    // },
+    1020: {
+      slidesPerView: 3,
+    },
+    1240: {
+      slidesPerView: 5,
+    },
+  },
+})
+
 // ----- handmade mixitUp -----
 
 const productsNav = document.querySelector('.products__nav')
@@ -204,6 +231,7 @@ productsNav.addEventListener('click', function (e) {
     productsNavButton.classList.add('products__nav-item--active')
   }
 })
+
 // ----- handmade mixitUp -----
 
 const aboutNav = document.querySelector('.about__nav')
@@ -235,7 +263,7 @@ aboutNav.addEventListener('click', function (e) {
     aboutNavButton.classList.add('about__nav-item--active')
   }
 })
-
+/*
 // ----- MAP -----
 const map = L.map('map').setView([56.99795925683616, 40.974], 14.4)
 L.tileLayer(
@@ -375,7 +403,6 @@ faqItemsContainer.addEventListener('click', e => {
   }
 })
 
-
 // const menuBtn = document.querySelector('.header__btn-menu')
 // const menu = document.querySelector('.menu')
 // let menuIsOpen
@@ -390,7 +417,7 @@ faqItemsContainer.addEventListener('click', e => {
 //     menuIsOpen = true
 //   }
 // })
-*/
+
 const headerMenuBtn = document.querySelector('.header__btn-menu')
 const headerMeasureBtn = document.querySelector('.header__btn-measure')
 const headerCalcBtn = document.querySelector('.header__btn-calc')
@@ -419,3 +446,6 @@ const headerCalcBtn = document.querySelector('.header__btn-calc')
 //     this.style.backgroundColor = 'blue';
 //   }
 // });
+
+
+*/
