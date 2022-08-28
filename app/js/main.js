@@ -25,7 +25,7 @@ $(function () {
   //   }
   // })
 })
-/*
+
 // ----- Popups -----
 
 const popups = document.querySelectorAll('.popup')
@@ -88,7 +88,7 @@ reviewBtn.addEventListener('click', e => {
   e.preventDefault()
   openModal('.popup__review')
 })
-*/
+
 // ----- Sliders -----
 
 const swiperStandard = new Swiper('.swiper-standard', swiperProps('s'))
