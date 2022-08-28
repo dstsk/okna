@@ -141,6 +141,9 @@
   .about__sertificates-wrapper {
     padding: 0 92px 0 100px;
   }
+  .portfolio__item-description {
+    text-align: center;
+  }
 }
 
 @media (max-width: 1020px) {
@@ -199,6 +202,22 @@
   }
   .about__reviews-text {
     padding: 0 40px;
+  }
+
+  //portfolio
+  .swiper-button-prev-port {
+    left: 60px;
+  }
+  .swiper-button-next-port {
+    right: 60px;
+  }
+  .portfolio__item {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .portfolio__item {
+    gap: 50px;
   }
 }
 
@@ -270,15 +289,16 @@
   .swiper-button-prev-e,
   // .swiper-button-prev-r,
   // .swiper-button-prev-sert,
-  .swiper-button-prev-port,
+  // .swiper-button-prev-port,
   .swiper-button-next-s,
   .swiper-button-next-b,
   .swiper-button-next-p,
-  .swiper-button-next-e,
+  .swiper-button-next-e
   // .swiper-button-next-r,
   // .swiper-button-next-sert,
-  .swiper-button-next-port {
-    top: 380px;
+  // .swiper-button-next-port
+  {
+    top: 60%;
   }
   .products__item {
     align-items: center;
@@ -287,6 +307,9 @@
   .products__item-title,
   .products__item-text {
     text-align: center;
+  }
+  .products__item-text {
+    margin: 0 auto 25px;
   }
   .products__item-image {
     width: 100%;
@@ -332,6 +355,15 @@
   }
   .about__benefits-img.img-slim {
     margin-left: 27px;
+  }
+  //portfolio
+  .portfolio__slider-item-inner img {
+    width: 75%;
+    height: 300px;
+  }
+  .swiper-button-prev-port,
+  .swiper-button-next-port {
+    top: 50%;
   }
 }
 
@@ -405,6 +437,23 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 7px;
   }
+  .swiper-button-prev-s,
+  .swiper-button-prev-b,
+  .swiper-button-prev-p,
+  .swiper-button-prev-e,
+  // .swiper-button-prev-r,
+  // .swiper-button-prev-sert,
+  // .swiper-button-prev-port,
+  .swiper-button-next-s,
+  .swiper-button-next-b,
+  .swiper-button-next-p,
+  .swiper-button-next-e
+  // .swiper-button-next-r,
+  // .swiper-button-next-sert,
+  // .swiper-button-next-port
+  {
+    display: none;
+  }
 
   //benefits
   .benefits__wrapper {
@@ -440,6 +489,40 @@
   }
   .about__reviews-text {
     padding: 0px;
+  }
+
+  //portfolio
+  .portfolio__slider-item-inner img {
+    width: 100%;
+    height: 250px;
+  }
+  .portfolio__slider-box {
+    padding: 43px 55px 15px;
+  }
+  .swiper-button-prev-port {
+    left: 50px;
+  }
+  .swiper-button-next-port {
+    right: 50px;
+  }
+  .portfolio__item-header {
+    flex-direction: column;
+  }
+  .portfolio__item-date {
+    margin: 0 0 50px;
+  }
+  .portfolio__item-address::before {
+    left: 50%;
+    top: -45px;
+    transform: translateX(-50%);
+  }
+  .portfolio__wrapper {
+    padding: 100px 20px 60px;
+  }
+  .portfolio__item-close {
+    right: 50%;
+    top: 45px;
+    transform: translateX(50%);
   }
 }
 
@@ -536,6 +619,25 @@
   }
   .about__benefits-img.img-slim {
     margin-left: 0px;
+  }
+  .swiper-button-prev-sert,
+  .swiper-button-next-sert {
+    top: 50%;
+  }
+
+  //portfolio
+  .portfolio__slider-box {
+    padding: 43px 0px 0px;
+  }
+  .swiper-button-prev-port,
+  .swiper-button-next-port {
+    display: none;
+  }
+  .portfolio__item-slider-wrapper {
+    width: 300px;
+  }
+  .portfolio__item-img img {
+    width: 300px;
   }
 }
 

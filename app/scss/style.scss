@@ -1307,6 +1307,8 @@ a.benefits__btn {
       padding: 95px 0;
       img {
         width: 100%;
+        min-height: 253px;
+        object-fit: cover;
       }
     }
   }
@@ -1380,6 +1382,7 @@ a.about__btn {
   display: flex;
   justify-content: center;
   position: relative;
+  gap: 90px;
   &-description {
     padding-top: 10px;
   }
@@ -1395,7 +1398,7 @@ a.about__btn {
   &-address {
     position: relative;
     &::before {
-      content: url(../images/geolocation.png);
+      content: url(../images/geolocation.svg);
       position: absolute;
       left: -43px;
       top: -10px;
@@ -1427,11 +1430,8 @@ a.about__btn {
     }
   }
 }
-.portfolio__item-slider {
-  margin-right: 90px;
-}
 .portfolio__item-slider-wrapper {
-  max-width: 450px;
+  width: 360px;
   height: 229px;
   position: relative;
 }
@@ -1441,8 +1441,8 @@ a.about__btn {
 .swiper-pagination-fraction {
   position: absolute;
   bottom: -33px;
-  left: 30%;
   width: 100%;
+  text-align: center;
 }
 .swiper-pagination-1 .swiper-pagination-bullet,
 .swiper-pagination-2 .swiper-pagination-bullet,
@@ -1484,24 +1484,28 @@ a.about__btn {
   object-fit: cover;
 }
 
-.portfolio__slider-wrapper {
+.portfolio__slider-box {
   background-color: #fff;
   border-top-left-radius: 3px;
   border-top-right-radius: 3px;
-  padding: 43px 101px 15px;
+  padding: 43px 80px 15px;
   min-height: 400px;
   position: relative;
+}
+.portfolio__slider-wrapper {
+  padding: 0;
 }
 .portfolio__slider-wrapper-hidden {
   display: none;
 }
 .portfolio__slider-item {
   background-color: #fff;
+  text-align: center;
   &-inner {
-    padding: 44px 0 50px;
+    padding: 44px 30px 50px;
     img {
-      width: 215px;
-      height: 215px;
+      width: 100%;
+      height: 200px;
       object-fit: cover;
       &:hover {
         filter: drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.25));
@@ -1510,11 +1514,10 @@ a.about__btn {
     }
   }
 }
-.swiper-portfolio {
-  width: 1060px;
-  padding: 0 30px;
-  transform: translateX(-30px);
+.portfolio__slider-item-img {
+  width: 100%;
 }
+
 #map {
   height: 312px;
   width: 100%;

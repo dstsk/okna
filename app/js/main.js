@@ -100,10 +100,10 @@ const swiperReviews = new Swiper('.swiper-reviews', swiperProps('r'))
 //   '.swiper-sertificates',
 //   swiperProps('sert', 5)
 // )
-const swiperPortfolio = new Swiper(
-  '.swiper-portfolio',
-  swiperProps('port', 4, 50)
-)
+// const swiperPortfolio = new Swiper(
+//   '.swiper-portfolio',
+//   swiperProps('port', 4, 50)
+// )
 const swiperPortfolioItem1 = new Swiper(
   '.swiper-portfolio-item-1',
   swiperPortfolioItems('1')
@@ -185,19 +185,36 @@ const swiperSertificates = new Swiper('.swiper-sertificates', {
     disabledClass: `swiper-button-disabled-sert`,
   },
   breakpoints: {
-    // when window width is >= 320px
     680: {
       slidesPerView: 2,
     },
-    // when window width is >= 480px
-    // 865: {
-    //   slidesPerView: 3,
-    // },
     1020: {
       slidesPerView: 3,
     },
     1240: {
       slidesPerView: 5,
+    },
+  },
+})
+
+const swiperPortfolio = new Swiper('.swiper-portfolio', {
+  autoHeight: true,
+  slidesPerView: 1,
+  spaceBetween: 0,
+  navigation: {
+    nextEl: `.swiper-button-next-port`,
+    prevEl: `.swiper-button-prev-port`,
+    disabledClass: `swiper-button-disabled-port`,
+  },
+  breakpoints: {
+    865: {
+      slidesPerView: 2,
+    },
+    1020: {
+      slidesPerView: 3,
+    },
+    1240: {
+      slidesPerView: 4,
     },
   },
 })
@@ -263,7 +280,7 @@ aboutNav.addEventListener('click', function (e) {
     aboutNavButton.classList.add('about__nav-item--active')
   }
 })
-/*
+
 // ----- MAP -----
 const map = L.map('map').setView([56.99795925683616, 40.974], 14.4)
 L.tileLayer(
@@ -274,9 +291,7 @@ L.tileLayer(
   }
 ).addTo(map)
 
-const portfolioSliderWrapper = document.querySelector(
-  '.portfolio__slider-wrapper'
-)
+const portfolioSliderBox = document.querySelector('.portfolio__slider-box')
 const [...portfolioItems] = document.querySelectorAll('.portfolio__wrapper')
 const portfolioSliderItems = document.querySelectorAll(
   '.portfolio__slider-item-img'
@@ -299,7 +314,7 @@ portfolioSliderItems.forEach(item =>
     portfolioItems
       .find(item => id === Number(item.dataset.id))
       .classList.add('portfolio__wrapper-active')
-    portfolioSliderWrapper.classList.add('portfolio__slider-wrapper-hidden')
+    portfolioSliderBox.classList.add('portfolio__slider-wrapper-hidden')
   })
 )
 
@@ -330,7 +345,7 @@ portfolioCloseBtns.forEach(btn =>
       item.classList.remove('portfolio__wrapper-active')
     )
 
-    portfolioSliderWrapper.classList.remove('portfolio__slider-wrapper-hidden')
+    portfolioSliderBox.classList.remove('portfolio__slider-wrapper-hidden')
 
     map.setView([56.99795925683616, 40.974], 14.4, {
       animate: true,
@@ -354,7 +369,7 @@ markers.addEventListener('click', e => {
       e.target.classList.contains(item.dataset.marker)
     )
     currentItem.classList.add('portfolio__wrapper-active')
-    portfolioSliderWrapper.classList.add('portfolio__slider-wrapper-hidden')
+    portfolioSliderBox.classList.add('portfolio__slider-wrapper-hidden')
 
     console.log(currentItem)
 
@@ -370,7 +385,7 @@ markers.addEventListener('click', e => {
     })
   }
 })
-
+/*
 // faq
 
 const faqItemsContainer = document.querySelector('.faq__items')
