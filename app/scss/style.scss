@@ -1609,6 +1609,12 @@ a.about__btn {
   &__title {
     margin-bottom: 60px;
   }
+  &__left-side {
+    padding-right: 30px;
+  }
+  &__row {
+    margin-bottom: 40px;
+  }
   &__phones-title {
     font-size: 18px;
     font-weight: 700;
@@ -1624,7 +1630,7 @@ a.about__btn {
       margin-right: 30px;
     }
     &::before {
-      content: url(../images/contacts-icon-phone.png);
+      content: url(../images/contacts-icon-phone.svg);
       position: absolute;
       width: 25px;
       height: 27px;
@@ -1638,7 +1644,7 @@ a.about__btn {
     margin-bottom: 35px;
     position: relative;
     &::before {
-      content: url(../images/contacts-icon-tag.png);
+      content: url(../images/contacts-icon-tag.svg);
       position: absolute;
       width: 20px;
       height: 26px;
@@ -1651,7 +1657,7 @@ a.about__btn {
     margin-bottom: 55px;
     position: relative;
     &::before {
-      content: url(../images/contacts-icon-letter.png);
+      content: url(../images/contacts-icon-letter.svg);
       position: absolute;
       width: 22px;
       height: 22px;

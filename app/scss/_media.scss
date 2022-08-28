@@ -144,6 +144,11 @@
   .portfolio__item-description {
     text-align: center;
   }
+
+  //contacts
+  .contacts__form::before {
+    content: '';
+  }
 }
 
 @media (max-width: 1020px) {
@@ -228,6 +233,29 @@
   }
   .faq__item {
     padding: 20px;
+  }
+
+  //contacts
+  .contacts__wrapper {
+    // display: block;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  .contacts__text {
+    max-width: 100%;
+    margin-bottom: 35px;
+    padding: 0 60px;
+  }
+  .contacts__phones,
+  .contacts__address {
+    display: inline;
+  }
+  .contacts__email {
+    margin-bottom: 0px;
+  }
+  .contacts__left-side {
+    padding: 0;
   }
 }
 
@@ -374,6 +402,24 @@
   .swiper-button-prev-port,
   .swiper-button-next-port {
     top: 50%;
+  }
+
+  //contacts
+  // .contacts__row {
+  //   margin-bottom: 0px;
+  // }
+  .contacts__phones {
+    display: inline-block;
+    width: 330px;
+    margin-bottom: 0;
+    &::before {
+      content: url(../images/contacts-icon-phone.svg);
+      position: absolute;
+      width: 25px;
+      height: 27px;
+      top: 18px;
+      left: 25px;
+    }
   }
 }
 
@@ -542,6 +588,11 @@
   .faq__title {
     margin-bottom: 25px;
   }
+
+  //contacts
+  .contacts__text {
+    padding: 10px;
+  }
 }
 
 @media (max-width: 500px) {
@@ -667,6 +718,27 @@
   }
   .faq__answer {
     font-size: 12px;
+  }
+
+  //contacts
+  .contacts__wrapper {
+    padding: 0;
+  }
+  .contacts__title {
+    margin-bottom: 30px;
+  }
+  .contacts__form {
+    padding: 40px 25px;
+  }
+  .contacts__form-input {
+    width: 100%;
+  }
+  .contacts__form-agreement-text {
+    // text-align: right;
+    padding-left: 20px;
+  }
+  .contacts__form-agreement {
+    padding-left: 20px;
   }
 }
 
