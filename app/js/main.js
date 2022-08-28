@@ -385,7 +385,7 @@ markers.addEventListener('click', e => {
     })
   }
 })
-/*
+
 // faq
 
 const faqItemsContainer = document.querySelector('.faq__items')
@@ -461,6 +461,3 @@ const headerCalcBtn = document.querySelector('.header__btn-calc')
 //     this.style.backgroundColor = 'blue';
 //   }
 // });
-
-
-*/

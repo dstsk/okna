@@ -1542,7 +1542,7 @@ a.about__btn {
   &__item {
     font-size: 18px;
     font-weight: 700;
-    padding: 30px 80px 30px 30px;
+    padding: 30px;
     margin-bottom: 14px;
     background-color: #eeeef3;
     border-radius: 3px;
@@ -1566,20 +1566,28 @@ a.about__btn {
     display: none;
     font-size: 16px;
     font-weight: 400;
-    // visibility: collapse;
+    padding-right: 60px;
     opacity: 0;
     transition: all 0.3s;
   }
   &__answer--active {
     display: block;
-    // visibility: visible;
     opacity: 1;
     margin-top: 25px;
   }
-  .faq__arrow {
-    position: absolute;
-    top: 34px;
-    right: 30px;
+  &__question {
+    padding-right: 30px;
+  }
+  &__question-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__arrow-box {
+    height: 100%;
+  }
+  &__arrow {
+    margin-top: 3px;
     transition: all 0.3s;
     path {
       transition: all 0.3s;
