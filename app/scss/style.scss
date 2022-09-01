@@ -510,11 +510,8 @@
     display: flex;
     margin-bottom: 30px;
   }
-  &-slider {
-    margin-right: 91px;
-  }
   &-slider-wrapper {
-    max-width: 398px;
+    max-width: 307px;
     height: 229px;
     position: relative;
   }
@@ -525,6 +522,7 @@
   }
   &-description {
     padding-top: 15px;
+    margin-left: 90px;
   }
   &-title {
     font-size: 24px;
@@ -573,7 +571,7 @@
 .swiper-pagination-12.popup__services-slider-pagination.swiper-pagination-bullets.swiper-pagination-horizontal {
   position: absolute;
   bottom: 12px;
-  left: 26%;
+  left: 0;
   width: 100%;
   z-index: 100;
 }
