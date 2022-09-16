@@ -2153,8 +2153,9 @@
     <!-- popups -->
 
     <div class="overlay hidden">
-      <div class="popup__measure popup hidden">
-        <form class="measure__form" action="#" method="get">
+      <!-- popup-measure -->
+      <div class="popup popup__measure hidden">
+        <form class="popup__measure-form measure__form" action="#" method="get">
           <div class="measure__form-title">Вызвать замерщика на дом</div>
           <input
             class="measure__form-input"
@@ -2184,22 +2185,23 @@
               required
             />
             <label for="measure-form-checkbox"
-              ><div class="measure__form-agreement-text">
+              ><span>
                 Я согласен(на) на обработку
                 <a href="#">персональных данных</a>
-              </div></label
+              </span></label
             >
           </div>
           <button class="measure__form-btn btn" type="submit">
             Отправить заявку
           </button>
         </form>
-        <button class="measure__form__close-btn close-popup">
+        <button class="popup__close-btn">
           <img src="images/popup-close-btn.svg" alt="" />
         </button>
       </div>
-      <div class="popup__calc popup hidden">
-        <form class="calc__form" action="#" method="get">
+      <!-- popup-calc -->
+      <div class="popup popup__calc hidden">
+        <form class="popup__calc-form calc__form" action="#" method="get">
           <div class="calc__form-title">Заказать расчёт</div>
           <input
             class="calc__form-input"
@@ -2229,21 +2231,85 @@
               required
             />
             <label for="calc-form-checkbox"
-              ><div class="calc__form-agreement-text">
+              ><span>
                 Я согласен(на) на обработку
                 <a href="#">персональных данных</a>
-              </div></label
+              </span></label
             >
           </div>
           <button class="calc__form-btn btn" type="submit">
             Заказать расчёт
           </button>
         </form>
-        <button class="calc__form__close-btn close-popup">
+        <button class="popup__close-btn">
           <img src="images/popup-close-btn.svg" alt="" />
         </button>
       </div>
-      <div class="about__video hidden popup__video popup">
+      <!-- popup-review -->
+      <div class="popup popup__review hidden">
+        <form class="popup__review-form review__form" action="#" method="get">
+          <div class="review__form-title">Добавьте Ваш отзыв</div>
+          <input
+            class="review__form-input"
+            type="text"
+            name="userName"
+            placeholder="Ваше имя"
+            required
+          />
+          <input
+            class="review__form-input"
+            type="text"
+            name="phoneNumber"
+            placeholder="Номер договора"
+            id="phone-popup-calc"
+          />
+          <input
+            class="review__form-input"
+            type="email"
+            name="email"
+            placeholder="E-mail"
+          />
+          <textarea
+            class="review__form-input review__form--textarea"
+            name="review"
+            placeholder="Ваш отзыв"
+            resize="none"
+          ></textarea>
+          <div class="review__form-agreement">
+            <input
+              class="review__form-checkbox"
+              type="checkbox"
+              id="review-form-checkbox"
+              required
+            />
+            <label for="review-form-checkbox"
+              ><span>
+                Я согласен(на) на обработку
+                <a href="#">персональных данных</a>
+              </span></label
+            >
+          </div>
+          <button class="review__form-btn btn" type="submit">
+            Оставить отзыв
+          </button>
+        </form>
+        <button class="popup__close-btn">
+          <svg
+            width="18"
+            height="18"
+            viewBox="0 0 18 18"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path d="M17.25 1L1.25 17" stroke="black" stroke-width="2" />
+            <path d="M17.25 1L1.25 17" stroke="black" stroke-width="2" />
+            <path d="M1.25 1L17.25 17" stroke="black" stroke-width="2" />
+            <path d="M1.25 1L17.25 17" stroke="black" stroke-width="2" />
+          </svg>
+        </button>
+      </div>
+      <!-- popup-video -->
+      <div class="popup__video popup hidden">
         <iframe
           src="https://www.youtube.com/embed/ON6yoUte3ag"
           title="YouTube video player"
@@ -2252,6 +2318,7 @@
           allowfullscreen
         ></iframe>
       </div>
+      <!-- popup-services -->
       <div class="popup__services popup__services--1 popup hidden">
         <div class="popup__services-header">
           <div class="popup__services-slider-wrapper">
@@ -2298,7 +2365,7 @@
               >
             </div>
           </div>
-          <button class="popup__services-close-btn close-popup">
+          <button class="popup__services-close-btn popup__close-btn">
             <svg
               width="18"
               height="18"
@@ -2462,7 +2529,7 @@
               >
             </div>
           </div>
-          <button class="popup__services-close-btn close-popup">
+          <button class="popup__services-close-btn popup__close-btn">
             <svg
               width="18"
               height="18"
@@ -2623,7 +2690,7 @@
               >
             </div>
           </div>
-          <button class="popup__services-close-btn close-popup">
+          <button class="popup__services-close-btn popup__close-btn">
             <svg
               width="18"
               height="18"
@@ -2786,7 +2853,7 @@
               >
             </div>
           </div>
-          <button class="popup__services-close-btn close-popup">
+          <button class="popup__services-close-btn popup__close-btn">
             <svg
               width="18"
               height="18"
@@ -2900,71 +2967,6 @@
             </div>
           </div>
         </div>
-      </div>
-      <div class="popup__review popup hidden">
-        <form class="review__form" action="#" method="get">
-          <div class="review__form-title">Добавьте Ваш отзыв</div>
-          <input
-            class="review__form-input"
-            type="text"
-            name="userName"
-            placeholder="Ваше имя"
-            required
-          />
-          <input
-            class="review__form-input"
-            type="text"
-            name="phoneNumber"
-            placeholder="Номер договора"
-            id="phone-popup-calc"
-          />
-          <input
-            class="review__form-input"
-            type="email"
-            name="email"
-            placeholder="E-mail"
-          />
-          <textarea
-            class="review__form-input review__form--textarea"
-            name="review"
-            placeholder="Ваш отзыв"
-            resize="none"
-          ></textarea>
-          <div class="review__form-agreement">
-            <input
-              class="review__form-checkbox"
-              type="checkbox"
-              id="review-form-checkbox"
-              required
-            />
-            <label for="review-form-checkbox"
-              ><div class="review__form-agreement-text">
-                Я согласен(на) на обработку
-                <a href="#">персональных данных</a>
-              </div></label
-            >
-          </div>
-          <button class="review__form-btn btn" type="submit">
-            Оставить отзыв
-          </button>
-        </form>
-        <button class="review__form__close-btn close-popup">
-          <img src="images/popup-close-btn.svg" alt="" />
-        </button>
-        <button class="popup__services-close-btn close-popup">
-          <svg
-            width="18"
-            height="18"
-            viewBox="0 0 18 18"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path d="M17.25 1L1.25 17" stroke="black" stroke-width="2" />
-            <path d="M17.25 1L1.25 17" stroke="black" stroke-width="2" />
-            <path d="M1.25 1L17.25 17" stroke="black" stroke-width="2" />
-            <path d="M1.25 1L17.25 17" stroke="black" stroke-width="2" />
-          </svg>
-        </button>
       </div>
     </div>
     <script src="js/libs.min.js"></script>

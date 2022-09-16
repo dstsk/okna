@@ -1,35 +1,22 @@
+// ----------------------------------------------------------------------------------------------------------------
+// -------------------------------------------------- JQUERY ------------------------------------------------------
+// ----------------------------------------------------------------------------------------------------------------
 $(function () {
   // ----- phone mask -----
   $('#phone').mask('+ 7 (999) 999 99 99')
   $('#phone-popup-measure').mask('+ 7 (999) 999 99 99')
   $('#phone-popup-calc').mask('+ 7 (999) 999 99 99')
-
+  // ----- burger-menu -----
   $('.header__btn-menu').on('click', function () {
     $('.menu').slideToggle('linear')
   })
-
-  //   if (widthWind < 451) {
-  //     $('.header__btn-menu').on('click', function () {
-
-  //     })
-
-  //     // headerMenuBtn.addEventListener('click', () => {
-  //     //   if (headerMeasureBtn.style.display === 'block') {
-  //     //     headerMeasureBtn.style.display = 'none'
-  //     //   } else {
-  //     //     headerMeasureBtn.style.display = 'block'
-  //     //   }
-
-  //     // headerCalcBtn.style.display = 'block'
-  //     // })
-  //   }
-  // })
 })
 
-// ----- Popups -----
-
+// ----------------------------------------------------------------------------------------------------------------
+// -------------------------------------------------- POPUPS ------------------------------------------------------
+// ----------------------------------------------------------------------------------------------------------------
 const popups = document.querySelectorAll('.popup')
-const closeBtns = document.querySelectorAll('.close-popup')
+const closeBtns = document.querySelectorAll('.popup__close-btn')
 const btnsMeasure = document.querySelectorAll('.btn-measure')
 const btnsCalc = document.querySelectorAll('.btn-calc')
 const btnVideoPlay = document.querySelector('.about__description-play')
@@ -89,21 +76,14 @@ reviewBtn.addEventListener('click', e => {
   openModal('.popup__review')
 })
 
-// ----- Sliders -----
-
+// ----------------------------------------------------------------------------------------------------------------
+// -------------------------------------------------- SLIDERS -----------------------------------------------------
+// ----------------------------------------------------------------------------------------------------------------
 const swiperStandard = new Swiper('.swiper-standard', swiperProps('s'))
 const swiperBusiness = new Swiper('.swiper-business', swiperProps('b'))
 const swiperPremium = new Swiper('.swiper-premium', swiperProps('p'))
 const swiperExclusive = new Swiper('.swiper-exclusive', swiperProps('e'))
 const swiperReviews = new Swiper('.swiper-reviews', swiperProps('r'))
-// const swiperSertificates = new Swiper(
-//   '.swiper-sertificates',
-//   swiperProps('sert', 5)
-// )
-// const swiperPortfolio = new Swiper(
-//   '.swiper-portfolio',
-//   swiperProps('port', 4, 50)
-// )
 const swiperPortfolioItem1 = new Swiper(
   '.swiper-portfolio-item-1',
   swiperPortfolioItems('1')
@@ -219,7 +199,9 @@ const swiperPortfolio = new Swiper('.swiper-portfolio', {
   },
 })
 
-// ----- handmade mixitUp -----
+// ----------------------------------------------------------------------------------------------------------------
+// --------------------------------------------- MIXITUP-PRODUCTS -------------------------------------------------
+// ----------------------------------------------------------------------------------------------------------------
 
 const productsNav = document.querySelector('.products__nav')
 const productsSliderBoxes = [
@@ -249,8 +231,9 @@ productsNav.addEventListener('click', function (e) {
   }
 })
 
-// ----- handmade mixitUp -----
-
+// ----------------------------------------------------------------------------------------------------------------
+// ----------------------------------------------- MIXITUP-ABOUT --------------------------------------------------
+// ----------------------------------------------------------------------------------------------------------------
 const aboutNav = document.querySelector('.about__nav')
 const aboutSliderBoxes = [...document.querySelectorAll('.about__slider-box')]
 const aboutNavButtons = [...document.querySelectorAll('.about__nav-item')]
@@ -267,21 +250,20 @@ aboutNav.addEventListener('click', function (e) {
     const aboutSliderBox = aboutSliderBoxes.find(
       item => item.dataset.attr === dataAttr
     )
-    // console.log(productsSliderBox)
-
     aboutSliderBoxes.forEach(item =>
       item.classList.remove('about__slider-box--active')
     )
     aboutNavButtons.forEach(item =>
       item.classList.remove('about__nav-item--active')
     )
-    // console.log(productsNav)
     aboutSliderBox.classList.add('about__slider-box--active')
     aboutNavButton.classList.add('about__nav-item--active')
   }
 })
 
-// ----- MAP -----
+// ----------------------------------------------------------------------------------------------------------------
+// ---------------------------------------------------- MAP -------------------------------------------------------
+// ----------------------------------------------------------------------------------------------------------------
 const map = L.map('map').setView([56.99795925683616, 40.974], 14.4)
 L.tileLayer(
   'https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png',
@@ -356,8 +338,7 @@ portfolioCloseBtns.forEach(btn =>
   })
 )
 
-// markers
-
+// map-markers
 const markers = document.querySelector('.leaflet-marker-pane')
 markers.addEventListener('click', e => {
   e.preventDefault()
@@ -386,7 +367,9 @@ markers.addEventListener('click', e => {
   }
 })
 
-// faq
+// ----------------------------------------------------------------------------------------------------------------
+// ---------------------------------------------------- FAQ -------------------------------------------------------
+// ----------------------------------------------------------------------------------------------------------------
 
 const faqItemsContainer = document.querySelector('.faq__items')
 const faqItems = document.querySelectorAll('.faq__item')
@@ -417,47 +400,3 @@ faqItemsContainer.addEventListener('click', e => {
     clicked.querySelector('.faq__arrow').classList.add('faq__arrow--active')
   }
 })
-
-// const menuBtn = document.querySelector('.header__btn-menu')
-// const menu = document.querySelector('.menu')
-// let menuIsOpen
-
-// menuBtn.addEventListener('click', () => {
-//   console.log(menuIsOpen)
-//   if (menuIsOpen) {
-//     menu.style.display = 'none'
-//     menuIsOpen = false
-//   } else if (!menuIsOpen) {
-//     menu.style.display = 'block'
-//     menuIsOpen = true
-//   }
-// })
-
-const headerMenuBtn = document.querySelector('.header__btn-menu')
-const headerMeasureBtn = document.querySelector('.header__btn-measure')
-const headerCalcBtn = document.querySelector('.header__btn-calc')
-
-// const mql = window.matchMedia('(max-width: 451px)')
-
-// mql.addEventListener('change', e => {
-//   if (e.matches) {
-//     headerMenuBtn.addEventListener('click', () => {
-//       if (headerMeasureBtn.style.display === 'block') {
-//         headerMeasureBtn.style.display = 'none'
-//       } else {
-//         headerMeasureBtn.style.display = 'block'
-//       }
-
-//       // headerCalcBtn.style.display = 'block'
-//     })
-//   }
-// })
-
-// el.addEventListener('click', function() {
-//   if(this.style.backgroundColor === 'blue') {
-//     this.style.backgroundColor = '';
-//   }
-//   else {
-//     this.style.backgroundColor = 'blue';
-//   }
-// });
