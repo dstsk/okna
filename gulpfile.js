@@ -21,13 +21,27 @@ gulp.task('sass', function () {
 gulp.task('script', function () {
   return gulp
     .src([
-      'node_modules/jquery/dist/jquery.js',
-      'node_modules/jquery.maskedinput/src/jquery.maskedinput.js',
+      'node_modules/sal.js/dist/sal.js',
+      'node_modules/vanilla-lazyload/dist/lazyload.min.js',
       'node_modules/swiper/swiper-bundle.js',
-      'node_modules/leaflet/dist/leaflet.js',
-      'node_modules/magnific-popup/dist/jquery.magnific-popup.js',
+      'node_modules/imask/dist/imask.min.js',
     ])
     .pipe(concat('libs.min.js'))
+    .pipe(uglify())
+    .pipe(gulp.dest('app/js'))
+})
+gulp.task('map', function () {
+  return gulp
+    .src(['node_modules/leaflet/dist/leaflet.js'])
+    .pipe(concat('map.min.js'))
+    .pipe(uglify())
+    .pipe(gulp.dest('app/js'))
+})
+
+gulp.task('mainScript', function () {
+  return gulp
+    .src('app/js/main.js')
+    .pipe(concat('main.min.js'))
     .pipe(uglify())
     .pipe(gulp.dest('app/js'))
 })
@@ -35,11 +49,11 @@ gulp.task('script', function () {
 // prettier-ignore
 gulp.task('style', function () {
   return gulp.src([
+    'node_modules/sal.js/dist/sal.css',
+    'node_modules/normalize.css/normalize.css', 
     'node_modules/normalize.css/normalize.css', 
     'node_modules/swiper/swiper-bundle.css',
     'node_modules/leaflet/dist/leaflet.css',
-    'node_modules/magnific-popup/dist/magnific-popup.css',
-    'node_modules/animate.css/animate.css'
   ])
   .pipe(concat('libs.min.css'))
   .pipe(cssmin())
@@ -74,5 +88,13 @@ gulp.task('watch', function () {
 
 gulp.task(
   'default',
-  gulp.parallel('style', 'script', 'sass', 'watch', 'browser-sync')
+  gulp.parallel(
+    'style',
+    'script',
+    'map',
+    'mainScript',
+    'sass',
+    'watch',
+    'browser-sync'
+  )
 )

@@ -8,6 +8,20 @@ html {
   box-sizing: inherit;
 }
 
+body {
+  background-color: #e5e5e5;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #2f2f51;
+  position: relative;
+  overflow-x: hidden;
+}
+
+body.lock {
+  overflow-y: hidden;
+}
+
 a {
   display: inline-block;
   color: #000;
@@ -21,20 +35,21 @@ li {
   list-style: none;
 }
 
-body {
-  background-color: #e5e5e5;
-  font-family: 'Roboto', sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  color: #2f2f51;
-  position: relative;
-  // overflow-x: hidden;
-}
-
 h1,
 h2,
+h3,
+h4,
+h5,
+h6,
 p {
   margin: 0;
+}
+
+button {
+  border: none;
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .container {
@@ -49,17 +64,26 @@ p {
   text-align: center;
 }
 
-.swiper-wrapper {
-  align-items: center !important;
+.popup {
+  transition: all 0.3s ease;
 }
-
-.hidden {
-  display: none;
+.hidden-popup {
+  visibility: hidden;
+  opacity: 0;
 }
 
 .btn {
   transition: all 0.2s;
+  &:hover {
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+  }
 }
-.btn:hover {
-  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
